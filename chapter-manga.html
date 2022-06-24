@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="chapter-manga.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <a id="toTheTop" onclick="toTheTop()" style="margin-right: 2vw;"><i class="fa fa-arrow-up"></i></a>
+    <div class="nav-bar">
+        <div class="nav-bar-left">
+            <h2>LOGO</h2>
+            <ul>
+                <li><a onclick="show_bar_type()" href="#">Thể loại <i style="font-size: 15px;"
+                            class="fa fa-arrow-down"></i></a></li>
+                <li><a href="#">Lịch sử</a></li>
+                <li><a href="#">Khác</a></li>
+            </ul>
+        </div>
+        <div class="nav-bar-right">
+            <div class="input-search">
+                <input type="text" name="" id="search" placeholder="Tìm truyện...">
+                <i id="icon_search" class="fa fa-search" onclick="show_search()"></i>
+            </div>
+            <div style="cursor: pointer;" class="bar fa fa-bars" onclick="show_bar_content()"></div>
+            <div id="bar" class="bar-hide-content">
+                <ul>
+                    <li onclick="show_bar_type()"><i class=" fa fa-arrow-left"></i><a href="#">Thể loại</a>
+                    </li>
+                    <li><a href="#">Lịch sử</a></li>
+                    <li><a href="#">Khác</a></li>
+                    <li><a href="dangNhap.html">Đăng nhập</a></li>
+                    <li><a href="dangKy.html">Đăng ký</a></li>
+                </ul>
+            </div>
+            <div id="type" class="bar-content-type">
+                <ul id="list-type">
+                    <li>Tất cả</li>
+                    <li>Action</li>
+                    <li>Adult</li>
+                    <li>Adventure</li>
+                    <li>Anime</li>
+                    <li>Chuyển sinh</li>
+                    <li>Comedy</li>
+                    <li>Comic</li>
+                    <li>Cooking</li>
+                    <li>Cổ đại</li>
+                    <li>Doujinshi</li>
+                    <li>Drama</li>
+                    <li>Đam mỹ</li>
+                    <li>Ecchi</li>
+                    <li>Fantasy</li>
+                    <li>Gender Bender</li>
+                    <li>Harem</li>
+                    <li>Historical</li>
+                    <li>Horror</li>
+                    <li>Josei</li>
+                    <li>Live action</li>
+                    <li>Manga</li>
+                    <li>Manhua</li>
+                    <li>Manhwa</li>
+                    <li>Martial Arts</li>
+                    <li>Mature</li>
+                    <li>Mecha</li>
+                    <li>Mystery</li>
+                    <li>Ngôn tình</li>
+                    <li>One shot</li>
+                    <li>Psychological</li>
+                    <li>Romance</li>
+                    <li>School life</li>
+                    <li>Sci-fi</li>
+                    <li>Seinen</li>
+                    <li>Shoujo</li>
+                    <li>Shoujo Ai</li>
+                    <li>Shounen</li>
+                    <li>Shounen Ai</li>
+                    <li>Slice of Life</li>
+                    <li>Smut</li>
+                    <li>Soft Yaoi</li>
+                    <li>Soft Yuri</li>
+                    <li>Sports</li>
+                    <li>Supernatural</li>
+                    <li>Thiếu nhi</li>
+                    <li>Tragedy</li>
+                    <li>Trinh thám</li>
+                    <li>Truyện Scan</li>
+                    <li>Truyện màu</li>
+                    <li>Webtoon</li>
+                    <li>Xuyên không</li>
+                </ul>
+            </div>
+            <ul>
+                <li><a href="dangNhap.html">Đăng nhập</a></li>
+                <li><a href="dangKy.html">Đăng ký</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container-main">
+        <div class="circle-1"></div>
+        <div class="circle-2"></div>
+        <div class="circle-3"></div>
+        <div class="title-manga">
+            <h3><a href="#">Home</a></h3>
+            <i class="fa fa-angle-double-right"></i>
+            <h3><a href="#">Attack on titan</a></h3>
+            <i class="fa fa-angle-double-right"></i>
+            <p><a href="#">Chapter 1004</a></p>
+        </div>
+        <div class="list-manga">
+            <div class="list-chapter">
+                <a href="#"><i class="fa fa-chevron-left"></i></a>
+                <form action="#" method="get">
+                    <select name="chapter" id="" size="1">
+                        <option value="Chapter 137">Chapter 137</option>
+                        <option value="Chapter 136">Chapter 136</option>
+                        <option value="Chapter 135">Chapter 135</option>
+                        <option value="Chapter 134">Chapter 134</option>
+                        <option value="Chapter 133">Chapter 133</option>
+                    </select>
+                </form>
+                <a href="#"><i class="fa fa-chevron-right"></i></a>
+            </div>
+            <div class="content-chapter">
+                <img src="./assets/chapter/001.jpg" alt="">
+                <img src="./assets/chapter/002.jpg" alt="">
+                <img src="./assets/chapter/003.jpg" alt="">
+                <img src="./assets/chapter/004.jpg" alt="">
+                <img src="./assets/chapter/005.jpg" alt="">
+                <img src="./assets/chapter/006.jpg" alt="">
+                <img src="./assets/chapter/007.jpg" alt="">
+                <img src="./assets/chapter/008.jpg" alt="">
+                <img src="./assets/chapter/009.jpg" alt="">
+                <img src="./assets/chapter/010.jpg" alt="">
+                <img src="./assets/chapter/011.jpg" alt="">
+                <img src="./assets/chapter/012.jpg" alt="">
+                <img src="./assets/chapter/013.jpg" alt="">
+                <img src="./assets/chapter/014.jpg" alt="">
+                <img src="./assets/chapter/015.jpg" alt="">
+                <img src="./assets/chapter/016.jpg" alt="">
+                <img src="./assets/chapter/017.jpg" alt="">
+                <img src="./assets/chapter/018.jpg" alt="">
+                <img src="./assets/chapter/019.jpg" alt="">
+                <img src="./assets/chapter/020.jpg" alt="">
+                <img src="./assets/chapter/021.jpg" alt="">
+            </div>
+        </div>
+        <div class="container-comment">
+            <h3>Bình luận</h3>
+            <div class="list-comment">
+                <div class="list-comment-home">
+                    <div class="user-comment">
+                        <div class="comment-chap">
+                            <a href="#">Tên truyện</a>
+                            <a href="#">Tên chapter</a>
+                        </div>
+                        <div class="comment-info">
+                            <p>Trọng Phúc</p>
+                        </div>
+                        <div class="comment">
+                            <div class="line-comment"></div>
+                            <a href="#"><img src="./assets/images/daidien.png" alt=""></a>
+                            <p>Web như cc</p>
+                        </div>
+                        <div class="sub-comment">
+                            <a href="#">Trả lời</a>
+                            <p>-</p>
+                            <p class="date-time">22:20
+                                <span class="date-time-info">15/06/2000 21:30:21</span>
+                            </p>
+
+                        </div>
+                        <div class="rely-comment">
+                            <div class="comment-info">
+                                <p>Trọng Phúc</p>
+
+                            </div>
+                            <div class="comment">
+                                <a href="#"><img src="./assets/images/daidien.png" alt=""></a>
+                                <p>Web như cc Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore totam
+                                    similique nisi, libero aut magni eligendi quas eum quibusdam voluptate consequuntur
+                                    doloremque placeat illo nemo vero suscipit voluptatum nihil voluptatibus.</p>
+                            </div>
+                            <div class="sub-comment">
+                                <a href="#">Trả lời</a>
+                                <p>-</p>
+                                <p class="date-time">22:20
+                                    <span class="date-time-info">15/06/2000 21:30:21</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="rely-comment">
+                            <div class="comment-info">
+                                <p>Trọng Phúc</p>
+
+                            </div>
+                            <div class="comment">
+                                <a href="#"><img src="./assets/images/daidien.png" alt=""></a>
+                                <p>Web như cc Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore totam
+                                    similique nisi, libero aut magni eligendi quas eum quibusdam voluptate consequuntur
+                                    doloremque placeat illo nemo vero suscipit voluptatum nihil voluptatibus.</p>
+                            </div>
+                            <div class="sub-comment">
+                                <a href="#">Trả lời</a>
+                                <p>-</p>
+                                <p class="date-time">22:20
+                                    <span class="date-time-info">15/06/2000 21:30:21</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="rely-comment">
+                            <div class="comment-info">
+                                <p>Trọng Phúc</p>
+
+                            </div>
+                            <div class="comment">
+                                <a href="#"><img src="./assets/images/daidien.png" alt=""></a>
+                                <p>Web như cc Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore totam
+                                    similique nisi, libero aut magni eligendi quas eum quibusdam voluptate consequuntur
+                                    doloremque placeat illo nemo vero suscipit voluptatum nihil voluptatibus.</p>
+                            </div>
+                            <div class="sub-comment">
+                                <a href="#">Trả lời</a>
+                                <p>-</p>
+                                <p class="date-time">22:20
+                                    <span class="date-time-info">15/06/2000 21:30:21</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="rely-comment">
+                            <div class="comment-info">
+                                <p>Trọng Phúc</p>
+
+                            </div>
+                            <div class="comment">
+                                <a href="#"><img src="./assets/images/daidien.png" alt=""></a>
+                                <p>Web như cc Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore totam
+                                    similique nisi, libero aut magni eligendi quas eum quibusdam voluptate consequuntur
+                                    doloremque placeat illo nemo vero suscipit voluptatum nihil voluptatibus.</p>
+                            </div>
+                            <div class="sub-comment">
+                                <a href="#">Trả lời</a>
+                                <p>-</p>
+                                <p class="date-time">22:20
+                                    <span class="date-time-info">15/06/2000 21:30:21</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="rely-comment">
+                            <div class="comment-info">
+                                <p>Trọng Phúc</p>
+
+                            </div>
+                            <div class="comment">
+                                <a href="#"><img src="./assets/images/daidien.png" alt=""></a>
+                                <p>Web như cc Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore totam
+                                    similique nisi, libero aut magni eligendi quas eum quibusdam voluptate consequuntur
+                                    doloremque placeat illo nemo vero suscipit voluptatum nihil voluptatibus.</p>
+                            </div>
+                            <div class="sub-comment">
+                                <a href="#">Trả lời</a>
+                                <p>-</p>
+                                <p class="date-time">22:20
+                                    <span class="date-time-info">15/06/2000 21:30:21</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="rely-comment">
+                            <div class="comment-info">
+                                <p>Trọng Phúc</p>
+
+                            </div>
+                            <div class="comment">
+                                <a href="#"><img src="./assets/images/daidien.png" alt=""></a>
+                                <p>Web như cc Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore totam
+                                    similique nisi, libero aut magni eligendi quas eum quibusdam voluptate consequuntur
+                                    doloremque placeat illo nemo vero suscipit voluptatum nihil voluptatibus.</p>
+                            </div>
+                            <div class="sub-comment">
+                                <a href="#">Trả lời</a>
+                                <p>-</p>
+                                <p class="date-time">22:20
+                                    <span class="date-time-info">15/06/2000 21:30:21</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="rely-comment">
+                            <div class="comment-info">
+                                <p>Trọng Phúc</p>
+
+                            </div>
+                            <div class="comment">
+                                <a href="#"><img src="./assets/images/daidien.png" alt=""></a>
+                                <p>Web như cc Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore totam
+                                    similique nisi, libero aut magni eligendi quas eum quibusdam voluptate consequuntur
+                                    doloremque placeat illo nemo vero suscipit voluptatum nihil voluptatibus.</p>
+                            </div>
+                            <div class="sub-comment">
+                                <a href="#">Trả lời</a>
+                                <p>-</p>
+                                <p class="date-time">22:20
+                                    <span class="date-time-info">15/06/2000 21:30:21</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="rely-comment">
+                            <div class="comment-info">
+                                <p>Trọng Phúc</p>
+
+                            </div>
+                            <div class="comment">
+                                <a href="#"><img src="./assets/images/daidien.png" alt=""></a>
+                                <p>Web như cc Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore totam
+                                    similique nisi, libero aut magni eligendi quas eum quibusdam voluptate consequuntur
+                                    doloremque placeat illo nemo vero suscipit voluptatum nihil voluptatibus.</p>
+                            </div>
+                            <div class="sub-comment">
+                                <a href="#">Trả lời</a>
+                                <p>-</p>
+                                <p class="date-time">22:20
+                                    <span class="date-time-info">15/06/2000 21:30:21</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="rely-comment">
+                            <div class="comment-info">
+                                <p>Trọng Phúc</p>
+
+                            </div>
+                            <div class="comment">
+                                <a href="#"><img src="./assets/images/daidien.png" alt=""></a>
+                                <p>Web như cc Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore totam
+                                    similique nisi, libero aut magni eligendi quas eum quibusdam voluptate consequuntur
+                                    doloremque placeat illo nemo vero suscipit voluptatum nihil voluptatibus.</p>
+                            </div>
+                            <div class="sub-comment">
+                                <a href="#">Trả lời</a>
+                                <p>-</p>
+                                <p class="date-time">22:20
+                                    <span class="date-time-info">15/06/2000 21:30:21</span>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="user-comment">
+                        <div class="comment-chap">
+                            <a href="#">Tên truyện</a>
+                            <a href="#">Tên chapter</a>
+                        </div>
+                        <div class="comment-info">
+                            <p>Trọng Phúc</p>
+                        </div>
+                        <div class="comment">
+                            <a href="#"><img src="./assets/images/daidien.png" alt=""></a>
+                            <p>Web như cc</p>
+                        </div>
+                        <div class="sub-comment">
+                            <a href="#">Trả lời</a>
+                            <p>-</p>
+                            <p class="date-time">22:20
+                                <span class="date-time-info">15/06/2000 21:30:21</span>
+                            </p>
+                        </div>
+                        <div class="rely-comment">
+                            <div class="comment-info">
+                                <p>Trọng Phúc</p>
+
+                            </div>
+                            <div class="comment">
+                                <a href="#"><img src="./assets/images/daidien.png" alt=""></a>
+                                <p>Web như cc Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore totam
+                                    similique nisi, libero aut magni eligendi quas eum quibusdam voluptate consequuntur
+                                    doloremque placeat illo nemo vero suscipit voluptatum nihil voluptatibus.</p>
+                            </div>
+                            <div class="sub-comment">
+                                <a href="#">Trả lời</a>
+                                <p>-</p>
+                                <p class="date-time">22:20
+                                    <span class="date-time-info">15/06/2000 21:30:21</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="rely-comment">
+                            <div class="comment-info">
+                                <p>Trọng Phúc</p>
+
+                            </div>
+                            <div class="comment">
+                                <a href="#"><img src="./assets/images/daidien.png" alt=""></a>
+                                <p>Web như cc Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore totam
+                                    similique nisi, libero aut magni eligendi quas eum quibusdam voluptate consequuntur
+                                    doloremque placeat illo nemo vero suscipit voluptatum nihil voluptatibus.</p>
+                            </div>
+                            <div class="sub-comment">
+                                <a href="#">Trả lời</a>
+                                <p>-</p>
+                                <p class="date-time">22:20
+                                    <span class="date-time-info">15/06/2000 21:30:21</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="rely-comment">
+                            <div class="comment-info">
+                                <p>Trọng Phúc</p>
+
+                            </div>
+                            <div class="comment">
+                                <a href="#"><img src="./assets/images/daidien.png" alt=""></a>
+                                <p>Web như cc Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore totam
+                                    similique nisi, libero aut magni eligendi quas eum quibusdam voluptate consequuntur
+                                    doloremque placeat illo nemo vero suscipit voluptatum nihil voluptatibus.</p>
+                            </div>
+                            <div class="sub-comment">
+                                <a href="#">Trả lời</a>
+                                <p>-</p>
+                                <p class="date-time">22:20
+                                    <span class="date-time-info">15/06/2000 21:30:21</span>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- <h5>Dương Cuốc</h5>
+                    <div class="comment">
+                        <div class="image-comment">Q</div>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, dignissimos!</p>
+                    </div>
+                    <h5>Cửu Vỹ</h5>
+                    <div class="comment">
+                        <div class="image-comment">V</div>
+                        <p>amet consectetur adipisicing elit. Tempore, dignissimos!</p>
+                    </div>
+                    <div class="comment-time">21:30</div>
+                    <h5>Tũn</h5>
+                    <div class="comment">
+                        <div class="image-comment">K</div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum earum, eos aperiam suscipit deleniti autem, laudantium reprehenderit ratione, sint labore hic! Sunt doloribus autem repellat nam explicabo aliquid, molestias harum. amet consectetur adipisicing elit. Tempore, dignissimos!</p>
+                    </div>
+                    <h5>Sang rùa</h5>
+                    <div class="comment">
+                        <div class="image-comment">S</div>
+                        <p>Laborum earum, eos aperiam suscipit deleniti autem, laudantium reprehenderit ratione, sint labore hic! Sunt doloribus autem repellat nam explicabo aliquid, molestias harum. amet consectetur adipisicing elit. Tempore, dignissimos!</p>
+                    </div>
+                    <h5>Khôi</h5>
+                    <div class="comment">
+                        <div class="image-comment">K</div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nostrum dolorum similique ipsa voluptate. Accusantium numquam reprehenderit ipsum ullam. Doloremque expedita eveniet, nulla accusantium tenetur facilis est quibusdam dicta quod voluptate ex minima obcaecati illum eligendi dolor suscipit voluptatibus impedit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis inventore earum dolorum aliquid, nam rerum aliquam similique accusantium modi ipsa laboriosam quae laudantium in voluptate ex quibusdam corporis suscipit placeat. Laborum earum, eos aperiam suscipit deleniti autem, laudantium reprehenderit ratione, sint labore hic! Sunt doloribus autem repellat nam explicabo aliquid, molestias harum. amet consectetur adipisicing elit. Tempore, dignissimos!</p>
+                    </div>
+                    <h5>Khôi</h5>
+                    <div class="comment">
+                        <div class="image-comment">K</div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nostrum dolorum similique ipsa voluptate. Accusantium numquam reprehenderit ipsum ullam. Doloremque expedita eveniet, nulla accusantium tenetur facilis est quibusdam dicta quod voluptate ex minima obcaecati illum eligendi dolor suscipit voluptatibus impedit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis inventore earum dolorum aliquid, nam rerum aliquam similique accusantium modi ipsa laboriosam quae laudantium in voluptate ex quibusdam corporis suscipit placeat. Laborum earum, eos aperiam suscipit deleniti autem, laudantium reprehenderit ratione, sint labore hic! Sunt doloribus autem repellat nam explicabo aliquid, molestias harum. amet consectetur adipisicing elit. Tempore, dignissimos!</p>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="home.js"></script>
+    <script>
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("toTheTop").style.display = "block";
+            } else {
+                document.getElementById("toTheTop").style.display = "none";
+            }
+        }
+
+        function toTheTop() {
+            document.documentElement.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+
+        document.getElementById("toTheTop").addEventListener("click", toTheTop);
+    </script>
+</body>
+
+</html>

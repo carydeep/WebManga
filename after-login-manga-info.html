@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="afterLogin.css">
+    <link rel="stylesheet" href="manga-info.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="nav-bar">
+        <div class="nav-bar-left">
+            <h2>LOGO</h2>
+            <ul>
+                <li><a href="#">Thể loại</a><i onclick="show_bar_type()" style="font-size: 15px;" class="fa fa-arrow-down"></i></li>
+                <li><a href="#">Lịch sử</a></li>
+                <li><a href="#">Khác</a></li>
+            </ul>
+        </div>
+        <div class="nav-bar-right">
+            <div class="input-search">
+                <input type="text" name="" id="search" placeholder="Tìm truyện...">
+                <i id="icon_search" class="fa fa-search" onclick="show_search()"></i>
+            </div>
+            <div style="cursor: pointer;" class="bar fa fa-bars" onclick="show_bar_content()"></div>
+            <div id="bar" class="bar-hide-content">
+                <ul >
+                    <li onclick="show_bar_type()"><i class=" fa fa-arrow-left"></i><a href="#">Thể loại</a>
+                    </li>
+                    <li><a href="#">Lịch sử</a></li>
+                    <li><a href="#">Khác</a></li>
+                    <li><a href="#">Thông báo</a></li>
+                    <li><a href="home.html">Đăng xuất</a></li>
+                </ul>
+            </div>
+            <div id="type" class="bar-content-type">
+                <ul>
+                    <li>Tất cả</li>
+                    <li>Action</li>
+                    <li>Adult</li>
+                    <li>Adventure</li>
+                    <li>Anime</li>
+                    <li>Chuyển sinh</li>
+                    <li>Comedy</li>
+                    <li>Comic</li>
+                    <li>Cooking</li>
+                    <li>Cổ đại</li>
+                    <li>Doujinshi</li>
+                    <li>Drama</li>
+                    <li>Đam mỹ</li>
+                    <li>Ecchi</li>
+                    <li>Fantasy</li>
+                    <li>Gender Bender</li>
+                    <li>Harem</li>
+                    <li>Historical</li>
+                    <li>Horror</li>
+                    <li>Josei</li>
+                    <li>Live action</li>
+                    <li>Manga</li>
+                    <li>Manhua</li>
+                    <li>Manhwa</li>
+                    <li>Martial Arts</li>
+                    <li>Mature</li>
+                    <li>Mecha</li>
+                    <li>Mystery</li>
+                    <li>Ngôn tình</li>
+                    <li>One shot</li>
+                    <li>Psychological</li>
+                    <li>Romance</li>
+                    <li>School life</li>
+                    <li>Sci-fi</li>
+                    <li>Seinen</li>
+                    <li>Shoujo</li>
+                    <li>Shoujo Ai</li>
+                    <li>Shounen</li>
+                    <li>Shounen Ai</li>
+                    <li>Slice of Life</li>
+                    <li>Smut</li>
+                    <li>Soft Yaoi</li>
+                    <li>Soft Yuri</li>
+                    <li>Sports</li>
+                    <li>Supernatural</li>
+                    <li>Thiếu nhi</li>
+                    <li>Tragedy</li>
+                    <li>Trinh thám</li>
+                    <li>Truyện Scan</li>
+                    <li>Truyện màu</li>
+                    <li>Webtoon</li>
+                    <li>Xuyên không</li>
+                </ul>
+            </div>
+            <ul>
+                <li><a href="#"><p>P</p></a></li>
+                <li><a href="#"><i class="fa fa-bell-o"></i><sup>12</sup></a></li>
+                <li><a href="#"><i class="fa fa-sign-out"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container-main">
+        <div class="circle-1"></div>
+        <div class="circle-2"></div>
+        <div class="circle-3"></div>
+        <div class="container-manga">
+            <div class="container-manga-info">
+                <h3>Read manga online</h3>
+                <i class="fa fa-angle-double-right"></i>
+                <h4>Attack on titan</h4>
+            </div>
+            <div class="list-container-manga">
+                <h3>Attack on titan</h3>
+                <img src="./images/image1.jpg" alt="">
+                <ul>
+                    <li>
+                        <i class="fa fa-filter"></i>
+                        <p>Alternative:</p>
+                        <p>Cái này là gì t méo pk</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-user-plus"></i>
+                        <p>Tác giả:</p>
+                        <p>Ông thần nào đó</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-spinner"></i>
+                        <p>Trạng thái:</p>
+                        <p>Ongoing</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-clock-o"></i>
+                        <p>Cập nhật:</p>
+                        <p>30/2/2021 - 10:30</p>
+                    </li>
+                    <li><i class="fa fa-eye"></i>
+                        <p>Lượt xem:</p>
+                        <p>301231234112312341</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-file-text"></i>
+                        <p>Thể loại:</p>
+                        <p>Hành động,mlem mlem</p>
+                    </li>
+                    <li>
+                        <i class="fa fa-thumbs-o-up"></i>
+                        <p>Rating:</p>
+                        <ul dir="ltr" id="rating">
+                            <li class="fa fa-star star-5 "></li>
+                            <li class="fa fa-star star-4 check"></li>
+                            <li class="fa fa-star star-3 check"></li>
+                            <li class="fa fa-star star-2 check"></li>
+                            <li class="fa fa-star star-1 check"></li>
+                        </ul>
+                    </li>
+                    <li><input type="button" value="Nhận thông báo"></li>
+                </ul>
+                <div class="description">
+                    <p>Nội dung:</p>
+                    <p id="description-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aliquam inventore neque, quasi excepturi ab soluta itaque. Ut earum expedita perferendis eaque dolores autem, praesentium repudiandae dolorum enim? Asperiores corrupti sed officia architecto commodi corporis consequatur, officiis quia deserunt praesentium? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore recusandae vel ullam, omnis incidunt harum iure impedit rerum. Ratione, quod ipsa! Incidunt reprehenderit deleniti et sit tempore aspernatur dolorum? Recusandae, nemo sunt et, velit harum ipsum vel maxime dolore deleniti laudantium cumque perspiciatis! Totam eum sapiente in, nisi ipsum, deserunt porro temporibus assumenda unde error ea voluptates modi quod! Quas.</p>
+                    <p id="show-more" class="show-more"><span>Show more <i class="fa fa-caret-down"></i></span></p>
+                    <p style="display: none;" id="show-less" class="show-less"><span>Show less <i class="	fa fa-caret-up"></i></span></p>
+                </div>
+            </div>
+            <div class="chapter-number">
+                <div class="title">
+                    <div class="content-left">
+                        <p>Chapter name</p>
+                    </div>
+                    <div class="content-right">
+                        <p>View</p>
+                        <p>Uploaded</p>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="chapter">
+                        <div class="content-left">
+                            <p>Chapter 137:</p>
+                            <p>Titans</p>
+                        </div>
+                        <div class="content-right">
+                            <p>19999</p>
+                            <p>30/2/2021</p>
+                        </div>
+                    </div>
+                    <div class="chapter">
+                        <div class="content-left">
+                            <p>Chapter 137:</p>
+                            <p>Titans</p>
+                        </div>
+                        <div class="content-right">
+                            <p>19999</p>
+                            <p>30/2/2021</p>
+                        </div>
+                    </div>
+                    <div class="chapter">
+                        <div class="content-left">
+                            <p>Chapter 137:</p>
+                            <p>Titans</p>
+                        </div>
+                        <div class="content-right">
+                            <p>19999</p>
+                            <p>30/2/2021</p>
+                        </div>
+                    </div>
+                    <div class="chapter">
+                        <div class="content-left">
+                            <p>Chapter 137:</p>
+                            <p>Titans</p>
+                        </div>
+                        <div class="content-right">
+                            <p>19999</p>
+                            <p>30/2/2021</p>
+                        </div>
+                    </div>
+                    <div class="chapter">
+                        <div class="content-left">
+                            <p>Chapter 137:</p>
+                            <p>Titans</p>
+                        </div>
+                        <div class="content-right">
+                            <p>19999</p>
+                            <p>30/2/2021</p>
+                        </div>
+                    </div>
+                    <div class="chapter">
+                        <div class="content-left">
+                            <p>Chapter 137:</p>
+                            <p>Titans</p>
+                        </div>
+                        <div class="content-right">
+                            <p>19999</p>
+                            <p>30/2/2021</p>
+                        </div>
+                    </div>
+                    <div class="chapter">
+                        <div class="content-left">
+                            <p>Chapter 137:</p>
+                            <p>Titans</p>
+                        </div>
+                        <div class="content-right">
+                            <p>19999</p>
+                            <p>30/2/2021</p>
+                        </div>
+                    </div>
+                    <div class="chapter">
+                        <div class="content-left">
+                            <p>Chapter 137:</p>
+                            <p>Titans</p>
+                        </div>
+                        <div class="content-right">
+                            <p>19999</p>
+                            <p>30/2/2021</p>
+                        </div>
+                    </div>
+                    <div class="chapter">
+                        <div class="content-left">
+                            <p>Chapter 137:</p>
+                            <p>Titans</p>
+                        </div>
+                        <div class="content-right">
+                            <p>19999</p>
+                            <p>30/2/2021</p>
+                        </div>
+                    </div>
+                    <div class="chapter">
+                        <div class="content-left">
+                            <p>Chapter 137:</p>
+                            <p>Titans</p>
+                        </div>
+                        <div class="content-right">
+                            <p>19999</p>
+                            <p>30/2/2021</p>
+                        </div>
+                    </div>
+                    <div class="chapter">
+                        <div class="content-left">
+                            <p>Chapter 137:</p>
+                            <p>Titans</p>
+                        </div>
+                        <div class="content-right">
+                            <p>19999</p>
+                            <p>30/2/2021</p>
+                        </div>
+                    </div>
+                    <div class="chapter">
+                        <div class="content-left">
+                            <p>Chapter 137:</p>
+                            <p>Titans</p>
+                        </div>
+                        <div class="content-right">
+                            <p>19999</p>
+                            <p>30/2/2021</p>
+                        </div>
+                    </div>
+                    <div class="chapter">
+                        <div class="content-left">
+                            <p>Chapter 137:</p>
+                            <p>Titans</p>
+                        </div>
+                        <div class="content-right">
+                            <p>19999</p>
+                            <p>30/2/2021</p>
+                        </div>
+                    </div>
+                    <div class="chapter">
+                        <div class="content-left">
+                            <p>Chapter 137:</p>
+                            <p>Titans</p>
+                        </div>
+                        <div class="content-right">
+                            <p>19999</p>
+                            <p>30/2/2021</p>
+                        </div>
+                    </div>
+                    <div class="chapter">
+                        <div class="content-left">
+                            <p>Chapter 137:</p>
+                            <p>Titans</p>
+                        </div>
+                        <div class="content-right">
+                            <p>19999</p>
+                            <p>30/2/2021</p>
+                        </div>
+                    </div>
+                    <div class="chapter">
+                        <div class="content-left">
+                            <p>Chapter 137:</p>
+                            <p>Titans</p>
+                        </div>
+                        <div class="content-right">
+                            <p>19999</p>
+                            <p>30/2/2021</p>
+                        </div>
+                    </div>
+                    <div class="chapter">
+                        <div class="content-left">
+                            <p>Chapter 137:</p>
+                            <p>Titans</p>
+                        </div>
+                        <div class="content-right">
+                            <p>19999</p>
+                            <p>30/2/2021</p>
+                        </div>
+                    </div>
+                    <div class="chapter">
+                        <div class="content-left">
+                            <p>Chapter 137:</p>
+                            <p>Titans</p>
+                        </div>
+                        <div class="content-right">
+                            <p>19999</p>
+                            <p>30/2/2021</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="container-comment">
+            <h3>Bình luận</h3>
+            <div class="list-comment">
+                <div class="list-comment-home">
+                    <div class="your-comment">
+                        <div class="image-comment">P</div>
+                        <textarea name="" cols="2" rows="1" placeholder="Nhập bình luận của bạn"></textarea>
+                        <input type="submit" value="Post" rows="2">
+                    </div>
+                    <div class="comment-time">22:00</div>
+                    <h5>Trọng Phúc</h5>
+                    <div class="comment">
+                        <div class="image-comment">P</div>
+                        <p>Web như cc</p>
+                    </div>
+                    <h5>Dương Cuốc</h5>
+                    <div class="comment">
+                        <div class="image-comment">Q</div>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, dignissimos!</p>
+                    </div>
+                    <h5>Cửu Vỹ</h5>
+                    <div class="comment">
+                        <div class="image-comment">V</div>
+                        <p>amet consectetur adipisicing elit. Tempore, dignissimos!</p>
+                    </div>
+                    <div class="comment-time">21:30</div>
+                    <h5>Tũn</h5>
+                    <div class="comment">
+                        <div class="image-comment">K</div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum earum, eos aperiam suscipit deleniti autem, laudantium reprehenderit ratione, sint labore hic! Sunt doloribus autem repellat nam explicabo aliquid, molestias harum. amet consectetur adipisicing elit. Tempore, dignissimos!</p>
+                    </div>
+                    <h5>Sang rùa</h5>
+                    <div class="comment">
+                        <div class="image-comment">S</div>
+                        <p>Laborum earum, eos aperiam suscipit deleniti autem, laudantium reprehenderit ratione, sint labore hic! Sunt doloribus autem repellat nam explicabo aliquid, molestias harum. amet consectetur adipisicing elit. Tempore, dignissimos!</p>
+                    </div>
+                    <h5>Khôi</h5>
+                    <div class="comment">
+                        <div class="image-comment">K</div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nostrum dolorum similique ipsa voluptate. Accusantium numquam reprehenderit ipsum ullam. Doloremque expedita eveniet, nulla accusantium tenetur facilis est quibusdam dicta quod voluptate ex minima obcaecati illum eligendi dolor suscipit voluptatibus impedit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis inventore earum dolorum aliquid, nam rerum aliquam similique accusantium modi ipsa laboriosam quae laudantium in voluptate ex quibusdam corporis suscipit placeat. Laborum earum, eos aperiam suscipit deleniti autem, laudantium reprehenderit ratione, sint labore hic! Sunt doloribus autem repellat nam explicabo aliquid, molestias harum. amet consectetur adipisicing elit. Tempore, dignissimos!</p>
+                    </div>
+                    <h5>Khôi</h5>
+                    <div class="comment">
+                        <div class="image-comment">K</div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nostrum dolorum similique ipsa voluptate. Accusantium numquam reprehenderit ipsum ullam. Doloremque expedita eveniet, nulla accusantium tenetur facilis est quibusdam dicta quod voluptate ex minima obcaecati illum eligendi dolor suscipit voluptatibus impedit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis inventore earum dolorum aliquid, nam rerum aliquam similique accusantium modi ipsa laboriosam quae laudantium in voluptate ex quibusdam corporis suscipit placeat. Laborum earum, eos aperiam suscipit deleniti autem, laudantium reprehenderit ratione, sint labore hic! Sunt doloribus autem repellat nam explicabo aliquid, molestias harum. amet consectetur adipisicing elit. Tempore, dignissimos!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="manga-info.js"></script>
+    <script src="home.js"></script>
+</body>
+</html>

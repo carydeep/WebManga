@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="afterLogin.css">
+    <link rel="stylesheet" href="add-manga.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <a id="toTheTop" onclick="toTheTop()" style="margin-right: 2vw;"><i class="fa fa-arrow-up"></i></a>
+    <div class="nav-bar">
+        <div class="nav-bar-left">
+            <h2>LOGO</h2>
+            <ul>
+                <li><a onclick="show_bar_type()" href="#">Thể loại<i style="font-size: 15px;" class="fa fa-arrow-down"></i></a></li>
+                <li><a href="#">Lịch sử</a></li>
+                <li><a href="#">Khác</a></li>
+            </ul>
+        </div>
+        <div class="nav-bar-right">
+            <div class="input-search">
+                <input type="text" name="" id="search" placeholder="Tìm truyện...">
+                <i id="icon_search" class="fa fa-search" onclick="show_search()"></i>
+            </div>
+            <div style="cursor: pointer;" class="bar fa fa-bars" onclick="show_bar_content()"></div>
+            <div id="bar" class="bar-hide-content">
+                <ul>
+                    <li onclick="show_bar_type()"><i class=" fa fa-arrow-left"></i><a href="#">Thể loại</a>
+                    </li>
+                    <li><a href="#">Lịch sử</a></li>
+                    <li><a href="#">Khác</a></li>
+                    <li><a href="#">Thông báo</a></li>
+                    <li><a href="home.html">Đăng xuất</a></li>
+                </ul>
+            </div>
+            <div id="type" class="bar-content-type">
+                <ul id="list-type">
+                    <li>Tất cả</li>
+                    <li>Action</li>
+                    <li>Adult</li>
+                    <li>Adventure</li>
+                    <li>Anime</li>
+                    <li>Chuyển sinh</li>
+                    <li>Comedy</li>
+                    <li>Comic</li>
+                    <li>Cooking</li>
+                    <li>Cổ đại</li>
+                    <li>Doujinshi</li>
+                    <li>Drama</li>
+                    <li>Đam mỹ</li>
+                    <li>Ecchi</li>
+                    <li>Fantasy</li>
+                    <li>Gender Bender</li>
+                    <li>Harem</li>
+                    <li>Historical</li>
+                    <li>Horror</li>
+                    <li>Josei</li>
+                    <li>Live action</li>
+                    <li>Manga</li>
+                    <li>Manhua</li>
+                    <li>Manhwa</li>
+                    <li>Martial Arts</li>
+                    <li>Mature</li>
+                    <li>Mecha</li>
+                    <li>Mystery</li>
+                    <li>Ngôn tình</li>
+                    <li>One shot</li>
+                    <li>Psychological</li>
+                    <li>Romance</li>
+                    <li>School life</li>
+                    <li>Sci-fi</li>
+                    <li>Seinen</li>
+                    <li>Shoujo</li>
+                    <li>Shoujo Ai</li>
+                    <li>Shounen</li>
+                    <li>Shounen Ai</li>
+                    <li>Slice of Life</li>
+                    <li>Smut</li>
+                    <li>Soft Yaoi</li>
+                    <li>Soft Yuri</li>
+                    <li>Sports</li>
+                    <li>Supernatural</li>
+                    <li>Thiếu nhi</li>
+                    <li>Tragedy</li>
+                    <li>Trinh thám</li>
+                    <li>Truyện Scan</li>
+                    <li>Truyện màu</li>
+                    <li>Webtoon</li>
+                    <li>Xuyên không</li>
+                </ul>
+            </div>
+            <ul>
+                <li><a href="#">
+                        <p>P</p>
+                    </a></li>
+                <li><a href="#"><i class="fa fa-bell-o"></i><sup>12</sup></a></li>
+                <li><a href="#"><i class="fa fa-sign-out"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container-main">
+        <div class="circle-1"></div>
+        <div class="circle-2"></div>
+        <div class="circle-3"></div>
+        <div class="list-function">
+            <ul>
+                <li>
+                    <a href="#add-manga">
+                        <i class="fa fa-plus-circle"></i>
+                        <p>Thêm mới truyện</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#add-chapter">
+                        <i class="fa fa-files-o"></i>
+                        <p> Thêm chapter mới</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#edit-manga">
+                        <i class="fa fa-cogs"></i>
+                        <p>Chỉnh sửa</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <section id="add-manga" class="add-manga">
+            <div class="add-manga-container">
+                <form action="#" method="get">
+                    <table>
+                        <tr>
+                            <th>
+                                <p>Tiêu đề:</p>
+                            </th>
+                            <th><input type="text" name="" id="" placeholder="Title"></th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <p>Tên khác:</p>
+                            </th>
+                            <th><input type="text" name="" id="" placeholder="Ngăn cách nhiều tên bằng dấu ;"></th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <p>Nội dung nhạy cảm ?</p>
+                            </th>
+                            <th><input type="checkbox" name="" id=""></th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <p>Tác giả:</p>
+                            </th>
+                            <th><input type="text" name="" id="" placeholder="Authors"></th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <p>Thể loại:</p>
+                            </th>
+                            <th class="type-input">
+                                <div class="type-input-checkbox">
+                                    <input type="checkbox" name="action" id=""><label for="action">Action</label>
+                                </div>
+                                <div class="type-input-checkbox">
+                                    <input type="checkbox" name="action" id=""><label for="action">Action</label>
+                                </div>
+                                <div class="type-input-checkbox">
+                                    <input type="checkbox" name="action" id=""><label for="action">Action</label>
+                                </div>
+                                <div class="type-input-checkbox">
+                                    <input type="checkbox" name="action" id=""><label for="action">Action</label>
+                                </div>
+                                <div class="type-input-checkbox">
+                                    <input type="checkbox" name="action" id=""><label for="action">Action</label>
+                                </div>
+                                <div class="type-input-checkbox">
+                                    <input type="checkbox" name="action" id=""><label for="action">Action</label>
+                                </div>
+                                <div class="type-input-checkbox">
+                                    <input type="checkbox" name="action" id=""><label for="action">Action</label>
+                                </div>
+                                <div class="type-input-checkbox">
+                                    <input type="checkbox" name="action" id=""><label for="action">Action</label>
+                                </div>
+                                <div class="type-input-checkbox">
+                                    <input type="checkbox" name="action" id=""><label for="action">Action</label>
+                                </div>
+                                <div class="type-input-checkbox">
+                                    <input type="checkbox" name="action" id=""><label for="action">Action</label>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <p>Tóm tắt:</p>
+                            </th>
+                            <th><textarea name="" id="" cols="1" rows="10"></textarea></th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <p>Chú thích thêm:</p>
+                            </th>
+                            <th><textarea name="" id="" cols="1" rows="10"></textarea></th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <p>Tình trạng dịch:</p>
+                            </th>
+                            <th>
+                                <select name="" id="">
+                                    <option value="ongoing">Đang tiến hành</option>
+                                    <option value="finish">Đã hoàn thành</option>
+                                </select>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <p>Chọn trang bìa:</p>
+                            </th>
+                            <th style="display: flex; align-items: baseline;">
+                                <input type="file" name="" id="image-title" accept="image/png, image/jpeg">
+                                <span>
+                                    <p>Thư mục đã chọn:</p>
+                                    <span id="url-filename-title">none</span>
+                                </span>
+                                <label for="image-title">
+                                    <i class="fa fa-upload"></i>Browse
+                                </label>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <p>Ảnh trang bìa:</p>
+                            </th>
+                            <th><img id="anhBia" src="./images/image1.jpg" alt=""></th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <p>Chọn trang nền:</p>
+                            </th>
+                            <th style="display: flex; align-items: baseline;">
+                                <input type="file" name="" id="image-background" accept="image/png, image/jpeg">
+                                <span>
+                                    <p>Thư mục đã chọn:</p>
+                                    <span id="url-filename-background">none</span>
+                                </span>
+                                <label for="image-background">
+                                    <i class="fa fa-upload"></i>Browse
+                                </label>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <p>Ảnh nền truyện:</p>
+                            </th>
+                            <th><img style="width: 15vw; height: 10vw;" id="anhNen" src="./images/photo1.png" alt=""></th>
+                        </tr>
+                    </table>
+                    <Button>Thêm truyện</Button>
+                </form>
+            </div>
+        </section>
+        <section id="add-chapter" class="add-chapter">
+            <div class="add-chapter-container">
+                <form action="#" method="get">
+                    <table>
+                        <tr>
+                            <th>
+                                <p>Name manga:</p>
+                            </th>
+                            <th>
+                                <input list="manga" name="manga" placeholder="Tên bộ truyện">
+                                <datalist id="manga">
+                                    <option value="Attack on titan"></option>
+                                    <option value="One piece"></option>
+                                    <option value="fsdafas safsaf"></option>
+                                    <option value="asf sfa fsa f"></option>
+                                    <option value="asgasd sdag dsag das"></option>
+                                    <option value="asdg asdg asdg ads"></option>
+                                </datalist>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <p>Chapter number:</p>
+                            </th>
+                            <th><input type="number" name="" id="" min="1"></th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <p>Tiêu đề chapter:</p>
+                            </th>
+                            <th><input type="text" name="" id="" placeholder="Title name"></th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <p>Upload chpater:</p>
+                            </th>
+                            <th style="display: flex; align-items: baseline;">
+                                <input type="file" name="" id="image-manga" accept="image/png, image/jpeg" multiple>
+                                <span>
+                                    <p>Thư mục đã chọn:</p>
+                                    <span id="url-filename-manga">none</span>
+                                </span>
+                                <label for="image-manga">
+                                    <i class="fa fa-upload"></i>Browse
+                                </label>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th colspan="3" style="text-align: center;"><Button>Lưu</Button></th>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </section>
+        <section id="edit-manga" class="edit-manga">
+            <form action="#" method="get">
+                <table>
+                    <tr>
+                        <th>
+                            <p>Chọn truyện:</p>
+                        </th>
+                        <th>
+                            <input list="manga" name="manga" placeholder="Tên bộ truyện">
+                            <datalist id="manga">
+                                <option value="Attack on titan"></option>
+                                <option value="One piece"></option>
+                                <option value="fsdafas safsaf"></option>
+                                <option value="asf sfa fsa f"></option>
+                                <option value="asgasd sdag dsag das"></option>
+                                <option value="asdg asdg asdg ads"></option>
+                            </datalist>
+                        </th>
+                        <th>
+                            <Button>Xóa truyện</Button>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <p>Chọn chapters:</p>
+                        </th>
+                        <th>
+                            <select name="" id="">
+                                <option value="">Chapter 1</option>
+                                <option value="">Chapter 2</option>
+                                <option value="">Chapter 3</option>
+                                <option value="">Chapter 4</option>
+                                <option value="">Chapter 5</option>
+                                <option value="">Chapter 6</option>
+                                <option value="">Chapter 7</option>
+                                <option value="">Chapter 8</option>
+                                <option value="">Chapter 9</option>
+                            </select>
+                        </th>
+                        <th><Button>Xóa chapter</Button></th>
+                    </tr>
+                    <tr>
+                        <th colspan="3" style="text-align: center;"><strong>Sửa truyện</strong></th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <p>Tiêu đề:</p>
+                        </th>
+                        <th><input type="text" name="" id="" placeholder="Title"></th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <p>Tên khác:</p>
+                        </th>
+                        <th><input type="text" name="" id="" placeholder="Ngăn cách nhiều tên bằng dấu ;"></th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <p>Nội dung nhạy cảm ?</p>
+                        </th>
+                        <th><input type="checkbox" name="" id=""></th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <p>Tác giả:</p>
+                        </th>
+                        <th><input type="text" name="" id="" placeholder="Authors"></th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <p>Thể loại:</p>
+                        </th>
+                        <th class="type-input">
+                            <div class="type-input-checkbox">
+                                <input type="checkbox" name="action" id="" checked><label for="action">Action</label>
+                            </div>
+                            <div class="type-input-checkbox">
+                                <input type="checkbox" name="action" id=""><label for="action">Action</label>
+                            </div>
+                            <div class="type-input-checkbox">
+                                <input type="checkbox" name="action" id=""><label for="action">Action</label>
+                            </div>
+                            <div class="type-input-checkbox">
+                                <input type="checkbox" name="action" id="" checked><label for="action">Action</label>
+                            </div>
+                            <div class="type-input-checkbox">
+                                <input type="checkbox" name="action" id=""><label for="action">Action</label>
+                            </div>
+                            <div class="type-input-checkbox">
+                                <input type="checkbox" name="action" id=""><label for="action">Action</label>
+                            </div>
+                            <div class="type-input-checkbox">
+                                <input type="checkbox" name="action" id=""><label for="action">Action</label>
+                            </div>
+                            <div class="type-input-checkbox">
+                                <input type="checkbox" name="action" id=""><label for="action">Action</label>
+                            </div>
+                            <div class="type-input-checkbox">
+                                <input type="checkbox" name="action" id=""><label for="action">Action</label>
+                            </div>
+                            <div class="type-input-checkbox">
+                                <input type="checkbox" name="action" id=""><label for="action">Action</label>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <p>Tóm tắt:</p>
+                        </th>
+                        <th><textarea name="" id="" cols="1" rows="10"></textarea></th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <p>Chú thích thêm:</p>
+                        </th>
+                        <th><textarea name="" id="" cols="1" rows="10"></textarea></th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <p>Tình trạng dịch:</p>
+                        </th>
+                        <th>
+                            <select name="" id="">
+                                <option value="ongoing">Đang tiến hành</option>
+                                <option value="finish">Đã hoàn thành</option>
+                            </select>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <p>Chọn trang bìa:</p>
+                        </th>
+                        <th style="display: flex; align-items: baseline;">
+                            <input type="file" name="" id="image-title-edit" accept="image/png, image/jpeg">
+                            <span>
+                                <p>Thư mục đã chọn:</p>
+                                <span id="url-filename-title-edit">none</span>
+                            </span>
+                            <label for="image-title-edit">
+                                <i class="fa fa-upload"></i>Browse
+                            </label>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <p>Ảnh trang bìa:</p>
+                        </th>
+                        <th><img id="anhBia-edit" src="./images/image2.jpg" alt=""></th>
+                    </tr>
+                    <tr>
+                        <th colspan="3" style="text-align: center;"><Button style="padding: 20px 80px;">Lưu</Button></th>
+                    </tr>
+                    <tr>
+                        <th colspan="3" style="text-align: center;"><strong>Sửa chapter</strong></th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <p>Name manga:</p>
+                        </th>
+                        <th>
+                            <input list="manga" name="manga" placeholder="Tên bộ truyện">
+                            <datalist id="manga">
+                                <option value="Attack on titan"></option>
+                                <option value="One piece"></option>
+                                <option value="fsdafas safsaf"></option>
+                                <option value="asf sfa fsa f"></option>
+                                <option value="asgasd sdag dsag das"></option>
+                                <option value="asdg asdg asdg ads"></option>
+                            </datalist>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <p>Chapter number:</p>
+                        </th>
+                        <th><input type="number" name="" id="" min="1"></th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <p>Tiêu đề chapter:</p>
+                        </th>
+                        <th><input type="text" name="" id="" placeholder="Title name"></th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <p>Upload chapter:</p>
+                        </th>
+                        <th style="display: flex; align-items: baseline;">
+                            <input type="file" name="" id="image-manga-edit" accept="image/png, image/jpeg">
+                            <span>
+                                <p>Thư mục đã chọn:</p>
+                                <span id="url-filename-manga-edit">none</span>
+                            </span>
+                            <label for="image-manga-edit">
+                                <i class="fa fa-upload"></i>Browse
+                            </label>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <p>Ảnh đã chọn:</p>
+                        </th>
+                        <th id="list-image-edit">
+                            <div class="image-edit">
+                                <img src="./chapter/001.jpg" alt="">
+                                <sup class="fa">&#xf00d;</sup>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th colspan="3" style="text-align: center;"><Button style="padding: 20px 80px;">Lưu</Button></th>
+                    </tr>
+                </table>
+            </form>
+        </section>
+    </div>
+    <script src="home.js"></script>
+    <script src="./add-manga.js"></script>
+    <script>
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("toTheTop").style.display = "block";
+            } else {
+                document.getElementById("toTheTop").style.display = "none";
+            }
+        }
+
+        function toTheTop(){
+            document.documentElement.scrollTo({
+                top:0,
+                behavior:"smooth"
+            });
+        }
+
+        document.getElementById("toTheTop").addEventListener("click",toTheTop);
+    </script>
+</body>
+
+</html>

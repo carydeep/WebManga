@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url("./assets/images/background-login.jpg") no-repeat center center fixed;
+    background-size: cover;
+    height: auto;
+    overflow-y: unset;
+}
+
+a{
+    text-decoration: none;
+}
+
+.box_login{
+    padding: 20px;
+    width: 22rem;
+    text-align: center;
+    background-color: hsla(0, 0%, 0%, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 59px;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+}
+
+.box_login.box_login_right{
+    margin: 5vw auto;
+    margin-top: 7rem;
+}
+
+.box_login.box_login_left{
+    margin: 15rem auto auto;
+}
+
+.box_login>img{
+    height: 150px;
+    width: 150px;
+    border-radius: 80%;
+    margin-top: -100px;
+}
+
+h1{
+    font-size: 3rem;
+    margin: 1rem;
+}
+.box_login_input{
+    width: 100%;
+    display:flex;
+    margin-top: 1rem;
+    justify-content: center;
+    position: relative;
+}
+.logo_input{
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 100px;
+    z-index: 100;
+    border: 1px black solid;
+}
+
+.logo_input i{
+    margin: 10px;
+}
+
+.box_login p{
+    text-align: left;
+    margin: 30px auto auto 40px;
+    font-weight: bold;
+}
+
+.field{
+    position: relative;
+    width: 5rem;
+    height: 26px;
+    margin-top: 10px;
+    border-radius: 20px;
+    border: black solid 1px;
+    background-color: rgba(255, 255, 255, 0.5);
+    outline: none;
+    left: -20px;
+    padding-left: 20px;
+    padding-top: 4px;
+}
+
+.box_login_input input{
+    position: relative;
+    width: 12rem;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 20px;
+    border: black solid 1px;
+    background-color: rgba(255, 255, 255, 0.5);
+    outline: none;
+}
+
+.box_login_input_right input{
+    text-align: right;
+    right: -20px;
+    padding-right: 30px;
+}
+
+.box_login_input_left p{
+    position: absolute;
+    left: 50px;
+    font-size: 13px;
+    bottom: -8px;
+}
+
+.box_login_input_right p{
+    position: absolute;
+    font-size: 13px;
+    right: 90px;
+    bottom: -8px;
+}
+
+.box_login_input_left.error .logo_input , .box_login_input_right.error .logo_input{
+    background-color: rgb(255, 70, 70);
+}
+
+.box_login_input_left.error p , .box_login_input_right.error p{
+    color: rgb(255, 70, 70);
+}
+
+.box_login_input_left.not-error .logo_input , .box_login_input_right.not-error .logo_input{
+    background-color: rgb(115, 255, 138);
+}
+
+.box_login_input_left input{
+    left: -20px;
+    padding-left: 30px;
+}
+
+.gang_link{
+    display:flex;
+    justify-content: space-between;
+}
+.gang_link p{
+    margin-top: 0.5rem;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.check_box{
+    margin-top: .5rem;
+    margin-left: 10px;
+}
+
+input[type="radio"]{
+    width: 15px;
+    height: 15px;
+}
+
+label{
+    position: relative;
+    left: -20px;
+    margin-right: 5px;
+}
+
+input[type="submit"]{
+    margin-top: 1rem;
+    display: inline-block;
+    width: 13rem;
+    height: 2.5rem;
+    border-radius: 50px;
+    border: #707070 solid 1px;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 1rem;
+    outline: none;
+}
+input[type="submit"]:hover{
+    cursor: pointer;
+}
+
+.image{
+    display: none;
+}
+
+@keyframes smaller{
+    25%{
+        transform: scale(.7);
+    }
+    90%{
+        transform: scale(1);
+    }
+}
+
+@keyframes changeImage{
+    5%{
+        transform:translateX(0) scale(1);
+    }
+    10%{
+        transform:translateX(0) scale(.8);
+    }
+    50%{
+        transform:translateX(calc(-100vw + 100%)) scale(.8);
+    }
+    95%{
+        transform:translateX(calc(-100vw + 100%)) scale(1);
+    }
+}
+
+@media (min-width:1100px){
+    body{
+        height: auto;
+        /* overflow-y: hidden; */
+    }
+
+    .box_login>img{
+        display: none;
+    }
+
+    .image{
+        position:fixed;
+        display: unset;
+        height: 100vh;
+        top: 0;
+        transition: transform 2s ease-in-out;
+        /* transform: translateX(calc(-100vw + 100%)); */
+        /* animation: changeImage 10s; */
+    }
+
+    .image.animation{
+        animation: changeImage 5s;
+    }
+
+    .image.image_left{
+        left: 0;
+    }
+
+    .image.image_right{
+        right: 0;
+    }
+
+    .box_login.box_login_left{
+        margin-right: 60%;
+    }
+
+    .box_login.box_login_right{
+        margin: unset;
+        margin-left: 60%;
+        margin-top: 3rem;
+        display: none;
+    }
+}

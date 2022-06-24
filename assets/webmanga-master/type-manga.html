@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="type-manga.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="nav-bar">
+        <div class="nav-bar-left">
+            <h2>LOGO</h2>
+            <ul>
+                <li><a href="#">Thể loại</a><i onclick="show_bar_type()" style="font-size: 15px;"
+                        class="fa fa-arrow-down"></i></li>
+                <li><a href="#">Lịch sử</a></li>
+                <li><a href="#">Khác</a></li>
+            </ul>
+        </div>
+        <div class="nav-bar-right">
+            <div class="input-search">
+                <input type="text" name="" id="search" placeholder="Tìm truyện...">
+                <i id="icon_search" class="fa fa-search" onclick="show_search()"></i>
+            </div>
+            <div style="cursor: pointer;" class="bar fa fa-bars" onclick="show_bar_content()"></div>
+            <div id="bar" class="bar-hide-content">
+                <ul>
+                    <li onclick="show_bar_type()"><i class=" fa fa-arrow-left"></i><a href="#">Thể loại</a>
+                    </li>
+                    <li><a href="#">Lịch sử</a></li>
+                    <li><a href="#">Khác</a></li>
+                    <li><a href="dangNhap.html">Đăng nhập</a></li>
+                    <li><a href="dangKy.html">Đăng ký</a></li>
+                </ul>
+            </div>
+            <div id="type" class="bar-content-type">
+                <ul>
+                    <li>Tất cả</li>
+                    <li>Action</li>
+                    <li>Adult</li>
+                    <li>Adventure</li>
+                    <li>Anime</li>
+                    <li>Chuyển sinh</li>
+                    <li>Comedy</li>
+                    <li>Comic</li>
+                    <li>Cooking</li>
+                    <li>Cổ đại</li>
+                    <li>Doujinshi</li>
+                    <li>Drama</li>
+                    <li>Đam mỹ</li>
+                    <li>Ecchi</li>
+                    <li>Fantasy</li>
+                    <li>Gender Bender</li>
+                    <li>Harem</li>
+                    <li>Historical</li>
+                    <li>Horror</li>
+                    <li>Josei</li>
+                    <li>Live action</li>
+                    <li>Manga</li>
+                    <li>Manhua</li>
+                    <li>Manhwa</li>
+                    <li>Martial Arts</li>
+                    <li>Mature</li>
+                    <li>Mecha</li>
+                    <li>Mystery</li>
+                    <li>Ngôn tình</li>
+                    <li>One shot</li>
+                    <li>Psychological</li>
+                    <li>Romance</li>
+                    <li>School life</li>
+                    <li>Sci-fi</li>
+                    <li>Seinen</li>
+                    <li>Shoujo</li>
+                    <li>Shoujo Ai</li>
+                    <li>Shounen</li>
+                    <li>Shounen Ai</li>
+                    <li>Slice of Life</li>
+                    <li>Smut</li>
+                    <li>Soft Yaoi</li>
+                    <li>Soft Yuri</li>
+                    <li>Sports</li>
+                    <li>Supernatural</li>
+                    <li>Thiếu nhi</li>
+                    <li>Tragedy</li>
+                    <li>Trinh thám</li>
+                    <li>Truyện Scan</li>
+                    <li>Truyện màu</li>
+                    <li>Webtoon</li>
+                    <li>Xuyên không</li>
+                </ul>
+            </div>
+            <ul>
+                <li><a href="dangNhap.html">Đăng nhập</a></li>
+                <li><a href="dangKy.html">Đăng ký</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container-main">
+        <div class="circle-1"></div>
+        <div class="circle-2"></div>
+        <div class="circle-3"></div>
+        <div class="container-manga">
+            <div class="type-manga-info">
+                <p>Truyện thể loại <strong>Action</strong></p>
+                <p class="title">Thể loại này thường có nội dung về đánh nhau, bạo lực, hỗn loạn, với diễn biến nhanh
+                </p>
+                <div class="list-manga-1">
+                    <div class="manga-info-1">
+                        <div class="manga-image">
+                            <img src="./images/image1.jpg" alt="">
+                            <div class="bar-title">
+                                <div class="views">
+                                    <i class="fa fa-eye"></i>
+                                    <p>2232123312</p>
+                                </div>
+                                <div class="comments">
+                                    <i class="fa fa-wechat"></i>
+                                    <p>12313</p>
+                                </div>
+                            </div>
+                        </div>
+                        <h5><a href="#">Atack on titan</a></h5>
+                        <div class="manga-chapter">
+                            <strong>chua co chapter</strong>
+                            <!-- <table>
+                                <tr>
+                                    <td><a href="#">Chapter 1</a></td>
+                                    <td>
+                                        <p>15/06/2000</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">Chapter 1</a></td>
+                                    <td>
+                                        <p>15/06/2000</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">Chapter 1</a></td>
+                                    <td>
+                                        <p>15/06/2000</p>
+                                    </td>
+                                </tr>
+                            </table> -->
+                        </div>
+                    </div>
+                    <div class="manga-info-1">
+                        <div class="manga-image">
+                            <img src="./images/image1.jpg" alt="">
+                            <div class="bar-title">
+                                <div class="views">
+                                    <i class="fa fa-eye"></i>
+                                    <p>2232123312</p>
+                                </div>
+                                <div class="comments">
+                                    <i class="fa fa-wechat"></i>
+                                    <p>12313</p>
+                                </div>
+                            </div>
+                        </div>
+                        <h5>Attack on titans</h5>
+                        <div class="manga-chapter">
+                            <table>
+                                <tr>
+                                    <td><a href="#">Chapter 1</a></td>
+                                    <td>
+                                        <p>15/06/2000</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">Chapter 1</a></td>
+                                    <td>
+                                        <p>15/06/2000</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">Chapter 1</a></td>
+                                    <td>
+                                        <p>15/06/2000</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="manga-info-1">
+                        <div class="manga-image">
+                            <img src="./images/image1.jpg" alt="">
+                            <div class="bar-title">
+                                <div class="views">
+                                    <i class="fa fa-eye"></i>
+                                    <p>2232123312</p>
+                                </div>
+                                <div class="comments">
+                                    <i class="fa fa-wechat"></i>
+                                    <p>12313</p>
+                                </div>
+                            </div>
+                        </div>
+                        <h5>Attack on titans</h5>
+                        <div class="manga-chapter">
+                            <table>
+                                <tr>
+                                    <td><a href="#">Chapter 1</a></td>
+                                    <td>
+                                        <p>15/06/2000</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">Chapter 1</a></td>
+                                    <td>
+                                        <p>15/06/2000</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">Chapter 1</a></td>
+                                    <td>
+                                        <p>15/06/2000</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="manga-info-1">
+                        <div class="manga-image">
+                            <img src="./images/image1.jpg" alt="">
+                            <div class="bar-title">
+                                <div class="views">
+                                    <i class="fa fa-eye"></i>
+                                    <p>2232123312</p>
+                                </div>
+                                <div class="comments">
+                                    <i class="fa fa-wechat"></i>
+                                    <p>12313</p>
+                                </div>
+                            </div>
+                        </div>
+                        <h5>Attack on titans</h5>
+                        <div class="manga-chapter">
+                            <table>
+                                <tr>
+                                    <td><a href="#">Chapter 1</a></td>
+                                    <td>
+                                        <p>15/06/2000</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">Chapter 1</a></td>
+                                    <td>
+                                        <p>15/06/2000</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">Chapter 1</a></td>
+                                    <td>
+                                        <p>15/06/2000</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="manga-info-1">
+                        <div class="manga-image">
+                            <img src="./images/image1.jpg" alt="">
+                            <div class="bar-title">
+                                <div class="views">
+                                    <i class="fa fa-eye"></i>
+                                    <p>2232123312</p>
+                                </div>
+                                <div class="comments">
+                                    <i class="fa fa-wechat"></i>
+                                    <p>12313</p>
+                                </div>
+                            </div>
+                        </div>
+                        <h5>Attack on titans</h5>
+                        <div class="manga-chapter">
+                            <table>
+                                <tr>
+                                    <td><a href="#">Chapter 1</a></td>
+                                    <td>
+                                        <p>15/06/2000</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">Chapter 1</a></td>
+                                    <td>
+                                        <p>15/06/2000</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">Chapter 1</a></td>
+                                    <td>
+                                        <p>15/06/2000</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="manga-info-1">
+                        <div class="manga-image">
+                            <img src="./images/image1.jpg" alt="">
+                            <div class="bar-title">
+                                <div class="views">
+                                    <i class="fa fa-eye"></i>
+                                    <p>2232123312</p>
+                                </div>
+                                <div class="comments">
+                                    <i class="fa fa-wechat"></i>
+                                    <p>12313</p>
+                                </div>
+                            </div>
+                        </div>
+                        <h5>Attack on titans</h5>
+                        <div class="manga-chapter">
+                            <table>
+                                <tr>
+                                    <td><a href="#">Chapter 1</a></td>
+                                    <td>
+                                        <p>15/06/2000</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">Chapter 1</a></td>
+                                    <td>
+                                        <p>15/06/2000</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">Chapter 1</a></td>
+                                    <td>
+                                        <p>15/06/2000</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="manga-info-1">
+                        <div class="manga-image">
+                            <img src="./images/image1.jpg" alt="">
+                            <div class="bar-title">
+                                <div class="views">
+                                    <i class="fa fa-eye"></i>
+                                    <p>2232123312</p>
+                                </div>
+                                <div class="comments">
+                                    <i class="fa fa-wechat"></i>
+                                    <p>12313</p>
+                                </div>
+                            </div>
+                        </div>
+                        <h5>Attack on titans</h5>
+                        <div class="manga-chapter">
+                            <table>
+                                <tr>
+                                    <td><a href="#">Chapter 1</a></td>
+                                    <td>
+                                        <p>15/06/2000</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">Chapter 1</a></td>
+                                    <td>
+                                        <p>15/06/2000</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">Chapter 1</a></td>
+                                    <td>
+                                        <p>15/06/2000</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="manga-info-1">
+                        <div class="manga-image">
+                            <img src="./images/image1.jpg" alt="">
+                            <div class="bar-title">
+                                <div class="views">
+                                    <i class="fa fa-eye"></i>
+                                    <p>2232123312</p>
+                                </div>
+                                <div class="comments">
+                                    <i class="fa fa-wechat"></i>
+                                    <p>12313</p>
+                                </div>
+                            </div>
+                        </div>
+                        <h5>Attack on titans</h5>
+                        <div class="manga-chapter">
+                            <table>
+                                <tr>
+                                    <td><a href="#">Chapter 1</a></td>
+                                    <td>
+                                        <p>15/06/2000</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">Chapter 1</a></td>
+                                    <td>
+                                        <p>15/06/2000</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">Chapter 1</a></td>
+                                    <td>
+                                        <p>15/06/2000</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <ul>
+                    <li><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
+                    <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                    <li>
+                        <select name="" id="">
+                            <option value="chapter1">Chapter 1</option>
+                            <option value="chapter2">Chapter 2</option>
+                            <option value="chapter3">Chapter 3</option>
+                            <option value="chapter4">Chapter 4</option>
+                            <option value="chapter5">Chapter 5</option>
+                        </select>
+                    </li>
+                    <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                    <li><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
+                </ul>
+
+            </div>
+            <div class="type-manga-list">
+                <h5>Tìm kiếm</h5>
+                <div class="input-author">
+                    <label for="key">Từ khóa: </label>
+                    <input type="text" name="" id="key" placeholder="keywork">
+                </div>
+                <div class="input-author">
+                    <label for="author">Tác giả: </label>
+                    <input type="text" name="" id="author" placeholder="search author">
+                </div>
+                <div class="type-list">
+                    <strong>Thể loại</strong>
+                    <div class="list">
+                        <div inputValue="0" onclick="chooseType(this)" class="type">
+                            <div class="check-box"></div>
+                            <p>Action</p>
+                        </div>
+                        <div inputValue="0" onclick="chooseType(this)" class="type">
+                            <div class="check-box"></div>
+                            <p>Action</p>
+                        </div>
+                        <div inputValue="0" onclick="chooseType(this)" class="type">
+                            <div class="check-box"></div>
+                            <p>Action</p>
+                        </div>
+                        <div inputValue="0" onclick="chooseType(this)" class="type">
+                            <div class="check-box"></div>
+                            <p>Action</p>
+                        </div>
+                        <div inputValue="0" onclick="chooseType(this)" class="type">
+                            <div class="check-box"></div>
+                            <p>Action</p>
+                        </div>
+                        <div inputValue="0" onclick="chooseType(this)" class="type">
+                            <div class="check-box"></div>
+                            <p>Action</p>
+                        </div>
+                        <div inputValue="0" onclick="chooseType(this)" class="type">
+                            <div class="check-box"></div>
+                            <p>Action</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- <table>
+                    <tr>
+                        <td colspan="2">
+                            <p>Thể loại</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td >
+                            <div class="check-box"></div>
+                            <p>Action</p>
+                        </td>
+                        <td inputValue="0" onclick="chooseType(this)">
+                            <div class="check-box"></div>
+                            <p>Action</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td inputValue="0" onclick="chooseType(this)">
+                            <div class="check-box"></div>
+                            <p>Action</p>
+                        </td>
+                        <td inputValue="0" onclick="chooseType(this)">
+                            <div class="check-box"></div>
+                            <p>Action</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td inputValue="0" onclick="chooseType(this)">
+                            <div class="check-box"></div>
+                            <p>Action</p>
+                        </td>
+                        <td inputValue="0" onclick="chooseType(this)">
+                            <div class="check-box"></div>
+                            <p>Action</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td inputValue="0" onclick="chooseType(this)">
+                            <div class="check-box"></div>
+                            <p>Action</p>
+                        </td>
+                        <td inputValue="0" onclick="chooseType(this)">
+                            <div class="check-box"></div>
+                            <p>Action</p>
+                        </td>
+                    </tr>
+                </table> -->
+                <div class="status">
+                    <label for="status">Trạng thái: </label>
+                    <select name="" id="status">
+                        <option value="">abc</option>
+                        <option value="">abc</option>
+                        <option value="">abc</option>
+                        <option value="">abc</option>
+                    </select>
+                </div>
+                <button>Search</button>
+            </div>
+        </div>
+
+    </div>
+    <script src="home.js"></script>
+    <script src="type-manga.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,302 @@
+.container-main{
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.container-main ul{
+    align-items: unset;
+}
+
+.container-manga-info{
+    display: flex;
+    border-bottom: 1px solid #707070;
+    align-items: center;
+    justify-items: center;
+    padding-bottom: 1vw;
+}
+
+.container-manga-info a{
+    text-decoration: none;
+    color: #ffd92d;
+}
+
+.container-manga-info h3{
+    border-bottom: 0;
+    padding: 0;
+}
+
+.container-manga-info i{
+    color: white;
+    font-size: 2vw;
+    margin-left: 1vw;
+}
+
+.container-manga-info h4{
+    color: white;
+    font-size: 2.5vw;
+    margin-left: 1vw;
+    color: #40FFDF;
+}
+
+.list-container-manga{
+    width: 95%;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    margin-top: 1vw;
+    padding: 1vw 1.5vw;
+    border-radius: 40px;
+}
+
+.list-container-manga h3{
+    border-bottom: 0;
+    font-size: 5vw;
+    font-weight: normal;
+}
+
+.list-container-manga img{
+    width: 30vw;
+    height: 40vw;
+    float: left;
+    margin-right: 2vw;
+    margin-top: 1vw;
+}
+
+.list-container-manga ul{
+    list-style: none;
+    display: flex;
+    font-size:2vw;
+    flex-direction: column;
+    margin-top: 0;
+    align-items: left;
+}
+
+.list-container-manga ul li{
+    display: flex;
+}
+
+.list-container-manga ul li input{
+    padding: 1vw 3vw;
+    border-radius: 40px;
+    font-size: 2vw;
+    color: red;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+}
+
+.list-container-manga ul li i{
+    padding: .5vw .5vw;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    font-size: 1.5vw;
+    margin-right: 1vw;
+    width: 20px;
+    height: 20px;
+}
+
+.list-container-manga ul li ul{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.list-container-manga ul li ul li{
+    display: unset;
+    margin: .5vw;
+    color: rgb(90, 90, 90);
+}
+
+.list-container-manga ul li ul li.check{
+    color: yellow;
+}
+
+.list-container-manga ul li ul:hover li{
+    color: rgb(90, 90, 90);
+}
+
+.list-container-manga ul li ul li:hover{
+    color: yellow;
+}
+
+.list-container-manga ul li ul .star-1:hover ~ li{
+    color: yellow;
+}
+
+.list-container-manga ul li ul .star-2:hover ~ li{
+    color: yellow;
+}
+
+.list-container-manga ul li ul .star-3:hover ~ li{
+    color: yellow;
+}
+
+.list-container-manga ul li ul .star-4:hover ~ li{
+    color: yellow;
+}
+
+.list-container-manga ul li ul .star-5:hover ~ li{
+    color: yellow;
+}
+
+.list-container-manga .description{
+    margin-top: 1.5vw;
+    border-top: 3px white dashed;
+    padding-top: 1.5vw;
+}
+
+.list-container-manga .description p{
+    font-size: 2vw;
+    color: white;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.list-container-manga .description .show-more, .list-container-manga .description .show-less{
+    text-align: center;
+    position: relative;
+    margin-top: 1vw;
+}
+
+.list-container-manga .description span:hover, .list-container-manga .description span:hover{
+    cursor: pointer;
+}
+
+.list-container-manga .description .show-more::before, .list-container-manga .description .show-less::before{
+    content: "";
+    position: absolute;
+    border-bottom: 2px dashed white;
+    width: 50%;
+    left: 25%;
+}
+
+.show{
+    display: unset;
+}
+
+.hidden{
+    display: hidden !important;
+}
+
+.list-container-manga .description p span{
+    text-decoration: none;
+    color: #FF7600;
+}
+
+.chapter-number{
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    margin-top: 1vw;
+    padding: 1vw 1.5vw;
+    border-radius: 40px;
+    position: relative;
+}
+
+.chapter-number .title{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px #FF7600 solid;
+    padding-bottom: 1vw;
+}
+
+.content-right p{
+    float: left;
+    margin: 0 2vw;
+}
+
+.content-left p{
+    float: left;
+}
+
+.content-left a{
+    font-size: 1.5vw;
+    text-decoration: none;
+    color: white;
+}
+
+.content-left ul{
+    margin-top: 0;
+    padding-left: 2vw;
+    align-items: center;
+}
+
+.chapter.list-chap{
+    position: absolute;
+    bottom: 0;
+}
+
+.chapter ul{
+    margin-left: 25vw;
+}
+
+.chapter ul li a{
+    padding: 0.2vw .5vw;
+    font-size: .8vw;
+}
+
+.chapter ul li select{
+    padding: 0.2vw .5vw;
+    font-size: .8vw;
+}
+
+.chapter-number .title p{
+    color: #FF7600;
+    font-size: 2.5vw;
+}
+
+.chapter-number .content{
+    margin-top: 2vw;
+    height: 50vh;
+}
+
+.chapter-number .content .chapter{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .5vw;
+}
+
+.chapter-number .content .chapter p{
+    color: white;
+    font-size: 2vw;
+}
+
+@media (min-width:820px){
+    .list-container-manga{
+        width: auto;
+    }
+
+    .list-container-manga img{
+        width: 22vw;
+        height: 30vw;
+    }
+
+    .list-container-manga ul li input{
+        padding: 1vw 3vw;
+        border-radius: 40px;
+        font-size: 1vw;
+        color: red;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .list-container-manga .description p{
+        font-size: 1.5vw;
+    }
+
+    .chapter-number .title p{
+        font-size: 1.5vw;
+    }
+
+    .chapter-number .content .chapter{
+        margin-bottom: 0;
+    }
+
+    .chapter-number .content .chapter p{
+        font-size: 1.5vw;
+    }
+}

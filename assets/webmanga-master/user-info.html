@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="afterLogin.css">
+    <link rel="stylesheet" href="user-info.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="nav-bar">
+        <div class="nav-bar-left">
+            <h2>LOGO</h2>
+            <ul>
+                <li><a onclick="show_bar_type()" href="#">Thể loại<i style="font-size: 15px;" class="fa fa-arrow-down"></i></a></li>
+                <li><a href="#">Lịch sử</a></li>
+                <li><a href="#">Khác</a></li>
+            </ul>
+        </div>
+        <div class="nav-bar-right">
+            <div class="input-search">
+                <input type="text" name="" id="search" placeholder="Tìm truyện...">
+                <i id="icon_search" class="fa fa-search" onclick="show_search()"></i>
+            </div>
+            <div style="cursor: pointer;" class="bar fa fa-bars" onclick="show_bar_content()"></div>
+            <div id="bar" class="bar-hide-content">
+                <ul >
+                    <li onclick="show_bar_type()"><i class=" fa fa-arrow-left"></i><a href="#">Thể loại</a>
+                    </li>
+                    <li><a href="#">Lịch sử</a></li>
+                    <li><a href="#">Khác</a></li>
+                    <li><a href="#">Thông báo</a></li>
+                    <li><a href="home.html">Đăng xuất</a></li>
+                </ul>
+            </div>
+            <div id="type" class="bar-content-type">
+                <ul id="list-type">
+                    <li>Tất cả</li>
+                    <li>Action</li>
+                    <li>Adult</li>
+                    <li>Adventure</li>
+                    <li>Anime</li>
+                    <li>Chuyển sinh</li>
+                    <li>Comedy</li>
+                    <li>Comic</li>
+                    <li>Cooking</li>
+                    <li>Cổ đại</li>
+                    <li>Doujinshi</li>
+                    <li>Drama</li>
+                    <li>Đam mỹ</li>
+                    <li>Ecchi</li>
+                    <li>Fantasy</li>
+                    <li>Gender Bender</li>
+                    <li>Harem</li>
+                    <li>Historical</li>
+                    <li>Horror</li>
+                    <li>Josei</li>
+                    <li>Live action</li>
+                    <li>Manga</li>
+                    <li>Manhua</li>
+                    <li>Manhwa</li>
+                    <li>Martial Arts</li>
+                    <li>Mature</li>
+                    <li>Mecha</li>
+                    <li>Mystery</li>
+                    <li>Ngôn tình</li>
+                    <li>One shot</li>
+                    <li>Psychological</li>
+                    <li>Romance</li>
+                    <li>School life</li>
+                    <li>Sci-fi</li>
+                    <li>Seinen</li>
+                    <li>Shoujo</li>
+                    <li>Shoujo Ai</li>
+                    <li>Shounen</li>
+                    <li>Shounen Ai</li>
+                    <li>Slice of Life</li>
+                    <li>Smut</li>
+                    <li>Soft Yaoi</li>
+                    <li>Soft Yuri</li>
+                    <li>Sports</li>
+                    <li>Supernatural</li>
+                    <li>Thiếu nhi</li>
+                    <li>Tragedy</li>
+                    <li>Trinh thám</li>
+                    <li>Truyện Scan</li>
+                    <li>Truyện màu</li>
+                    <li>Webtoon</li>
+                    <li>Xuyên không</li>
+                </ul>
+            </div>
+            <ul>
+                <li><a href="#"><p>P</p></a></li>
+                <li><a href="#"><i class="fa fa-bell-o"></i><sup>12</sup></a></li>
+                <li><a href="#"><i class="fa fa-sign-out"></i></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container-main">
+        <div class="circle-1"></div>
+        <div class="circle-2"></div>
+        <div class="grid-container">
+            <div class="user-info">
+                <div class="user-image">
+                    <img src="./images/daidien.png" alt="">
+                    <sup>
+                        <input type="file" name="" id="" accept="image/png, image/jpeg">
+                        <label for="file"><i class="fa fa-camera"></i></label>
+                    </sup>
+                    <p>Võ Trọng Phúc</p>
+                    <span>Member</span>
+                    <ul>
+                        <li>
+                            <span>10</span>
+                            <p>Chương đã đăng</p>
+                        </li>
+                        <li>
+                            <span>3</span>
+                            <p>Followed</p>
+                        </li>
+                        <li>
+                            <span>20/3/2020</span>
+                            <p>Joined</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="manage-function">
+                    <ul>
+                        <li id="thong-tin-ca-nhan" class="active"><p>Thông tin cá nhân</p></li>
+                        <li id="doi-mat-khau"><p>Đổi mật khẩu</p></li>
+                        <li id="doi-thong-tin-ca-nhan"><p>Đổi thông tin cá nhân</p></li>
+                        <li id="them-truyen"><p>Thêm truyện</p></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="user-profile">
+                <div id="profile-info" class="profile-info">
+                    <div class="catalogue">
+                        <p>User ID:</p>
+                        <p>User level:</p>
+                        <p>Joined:</p>
+                        <p>Last online:</p>
+                        <p>Stats:</p>
+                        <p>Bio:</p>
+                    </div>
+                    <div class="info">
+                        <p><i class="fa fa-id-badge"></i>2445006</p>
+                        <p><i class="fa fa-mortar-board"></i>Member</p>
+                        <p><i class="fa fa-calendar"></i>2021-01-04</p>
+                        <p><i class="fa fa-clock-o"></i>Now</p>
+                        <p>
+                            <i class="fa fa-eye"></i><span>1</span>
+                            <i style="margin-left: 2vw;" class="fa fa-files-o"></i><span>0</span>
+                        </p>
+                        <p class="bio">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi blanditiis eligendi animi commodi, odio porro, omnis consectetur ullam eaque eos cupiditate molestias dolorem odit maiores incidunt quis dolorum assumenda nobis. Inventore similique totam at quidem fuga! Voluptates impedit distinctio vero id aperiam blanditiis vel? Vitae adipisci amet placeat quas repudiandae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, beatae pariatur! Doloremque facilis deserunt, totam nemo beatae dolor, temporibus consequatur commodi illum corporis, tempora aspernatur quis? Voluptates, praesentium, culpa autem ipsa delectus perspiciatis, debitis id repudiandae minima atque facere illo dolores quia harum aspernatur aperiam earum nemo possimus quidem rerum?</p>
+                    </div>
+                </div>
+                <div id="change-password" class="change-password">
+                    <form action="#" method="get">
+                        <h4>Đổi mật khẩu</h4>
+                        <p>Nhập mật khẩu để đổi bạn êi</p>
+                        <input type="password" placeholder="PassWord">
+                        <p style="margin-top: 5vw;">Xác nhận lại bạn êi</p>
+                        <input type="password" placeholder="Confirm PassWord">
+                        <button onclick="loading_button(this,'Đổi thành công')" type="submit"><i></i> Xác nhận</button>
+                    </form>
+                    <form action="#" method="get">
+                        <h4>Đổi Email</h4>
+                        <p>Nhập email</p>
+                        <input type="email" placeholder="Email">
+                        <p style="margin-top: 5vw; display: none;">Nhập mã xác nhận</p>
+                        <input style="display: none;" type="password" placeholder="Email Confirm">
+                        <button id="change-email" type="submit"><i></i> Xác nhận</button>
+                        <button style="display: none;" onclick="loading_button(this,'Đổi thành công')" id="change-email-1" type="submit"><i></i> Xác nhận</button>
+                    </form>
+                </div>
+                <div id="change-profile" class="change-profile">
+                    <form action="#" method="get">
+                        <table>
+                            <tr>
+                                <th><p>Username:</p></th>
+                                <th><input type="text" name="" id="" placeholder="Username" readonly></th>
+                            </tr>
+                            <tr>
+                                <th><p>Email:</p></th>
+                                <th><input type="email" name="" id="" placeholder="Email"></th>
+                            </tr>
+                            <tr>
+                                <th><p>Biography:</p></th>
+                                <th><textarea name="" id="" cols="1" rows="3" placeholder="Nhập tiểu sử"></textarea></th>
+                            </tr>
+                            <tr>
+                                <th><p>Avatar:</p></th>
+                                <th style="display: flex;">
+                                    <input type="file" name="" id="image-url" accept="image/png, image/jpeg" >
+                                    <span>
+                                        <p>Thư mục đã chọn:</p>
+                                        <span id="url-filename">none</span>
+                                    </span>
+                                    <label for="image-url">
+                                        <i class="fa fa-upload"></i>Browse
+                                    </label>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th><p>Current avatar:</p></th>
+                                <th><img id="anhDaiDien" src="./images/daidien.png" alt=""></th>
+                            </tr>
+                        </table>
+                        <button onclick="loading_button(this,'Đổi thành công')" type="submit"><i></i> Xác nhận</button>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="home.js"></script>
+    <script src="user-info.js"></script>
+</body>
+</html>

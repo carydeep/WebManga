@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="afterLogin.css">
+    <link rel="stylesheet" href="manageUser.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="nav-bar" style="position: relative;">
+        <div class="nav-bar-left">
+            <h2>LOGO</h2>
+            <ul>
+                <li><a href="#">Thể loại<i onclick="show_bar_type()" style="font-size: 15px;"
+                            class="fa fa-arrow-down"></i></a></li>
+                <li><a href="#">Lịch sử</a></li>
+                <li><a href="#">Khác</a></li>
+            </ul>
+        </div>
+        <div class="nav-bar-right">
+            <div class="input-search">
+                <input type="text" name="" id="search" placeholder="Tìm truyện...">
+                <i id="icon_search" class="fa fa-search" onclick="show_search()"></i>
+            </div>
+            <div style="cursor: pointer;" class="bar fa fa-bars" onclick="show_bar_content()"></div>
+            <div id="bar" class="bar-hide-content">
+                <ul>
+                    <li onclick="show_bar_type()"><i class=" fa fa-arrow-left"></i><a href="#">Thể loại</a>
+                    </li>
+                    <li><a href="#">Lịch sử</a></li>
+                    <li><a href="#">Khác</a></li>
+                    <li><a href="#">Thông báo</a></li>
+                    <li><a href="home.html">Đăng xuất</a></li>
+                </ul>
+            </div>
+            <div id="type" class="bar-content-type">
+                <ul>
+                    <li>Tất cả</li>
+                    <li>Action</li>
+                    <li>Adult</li>
+                    <li>Adventure</li>
+                    <li>Anime</li>
+                    <li>Chuyển sinh</li>
+                    <li>Comedy</li>
+                    <li>Comic</li>
+                    <li>Cooking</li>
+                    <li>Cổ đại</li>
+                    <li>Doujinshi</li>
+                    <li>Drama</li>
+                    <li>Đam mỹ</li>
+                    <li>Ecchi</li>
+                    <li>Fantasy</li>
+                    <li>Gender Bender</li>
+                    <li>Harem</li>
+                    <li>Historical</li>
+                    <li>Horror</li>
+                    <li>Josei</li>
+                    <li>Live action</li>
+                    <li>Manga</li>
+                    <li>Manhua</li>
+                    <li>Manhwa</li>
+                    <li>Martial Arts</li>
+                    <li>Mature</li>
+                    <li>Mecha</li>
+                    <li>Mystery</li>
+                    <li>Ngôn tình</li>
+                    <li>One shot</li>
+                    <li>Psychological</li>
+                    <li>Romance</li>
+                    <li>School life</li>
+                    <li>Sci-fi</li>
+                    <li>Seinen</li>
+                    <li>Shoujo</li>
+                    <li>Shoujo Ai</li>
+                    <li>Shounen</li>
+                    <li>Shounen Ai</li>
+                    <li>Slice of Life</li>
+                    <li>Smut</li>
+                    <li>Soft Yaoi</li>
+                    <li>Soft Yuri</li>
+                    <li>Sports</li>
+                    <li>Supernatural</li>
+                    <li>Thiếu nhi</li>
+                    <li>Tragedy</li>
+                    <li>Trinh thám</li>
+                    <li>Truyện Scan</li>
+                    <li>Truyện màu</li>
+                    <li>Webtoon</li>
+                    <li>Xuyên không</li>
+                </ul>
+            </div>
+            <ul>
+                <li><a href="user-info.html"><img src="./images/daidien.png" alt=""></a></li>
+                <li><a href="#"><i class="fa fa-bell-o"></i><sup>12</sup></a></li>
+                <li><a href="home.html"><i class="fa fa-sign-out"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container-main">
+        <div class="circle-1"></div>
+        <div class="circle-2"></div>
+        <div class="circle-3"></div>
+        <div class="container-user">
+            <div class="function-manager-user">
+                <ul>
+                    <li onclick="chooseGeneral(this)" class="check">
+                        <a href="#">
+                            <p><i class="fa fa-bar-chart"></i> Tổng quan</p>
+                        </a>
+                    </li>
+                    <li onclick="chooseQuanLy(this)">
+                        <a href="#">
+                            <p><i class="fa fa-users"></i> Quản lý user</p>
+                        </a>
+                    </li>
+                    <li onclick="chooseManga(this)">
+                        <a href="#">
+                            <p><i class="fa fa-book"></i> Quản lý truyện</p>
+                        </a>
+                    </li>
+                    <li onclick="chooseVaiTro(this)">
+                        <a href="#">
+                            <p><i class="fa fa-vcard"></i> Vai Trò</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div id="generalWeb" class="general manager-user-info">
+                <div class="general-web">
+                    <div class="box-general user">
+                        <div class="box-title">
+                            <i class="fa fa-user"></i>
+                            <p>Tổng user</p>
+                        </div>
+                        <i class="fa fa-user"></i>
+                        <div class="box-number">24</div>
+                    </div>
+                    <div class="box-general book">
+                        <div class="box-title">
+                            <i class="fa fa-book"></i>
+                            <p>Tổng số truyện</p>
+                        </div>
+                        <i class="fa fa-book"></i>
+                        <div class="box-number">40</div>
+                    </div>
+                    <div class="box-general comment">
+                        <div class="box-title">
+                            <i class="fa fa-commenting-o"></i>
+                            <p>Tổng comment</p>
+                        </div>
+                        <i class="fa fa-commenting-o"></i>
+                        <div class="box-number">50</div>
+                    </div>
+                    <div class="box-general view">
+                        <div class="box-title">
+                            <i class="fa fa-eye"></i>
+                            <p>Tổng lượt xem</p>
+                        </div>
+                        <i class="fa fa-eye"></i>
+                        <div class="box-number">24</div>
+                    </div>
+                </div>
+                <div class="general-web chart-genaral">
+                    <div class="chart">
+                        <canvas id="generalView"></canvas>
+                    </div>
+                    <div class="chart">
+                        <canvas id="generalUser"></canvas>
+                    </div>
+                    <div class="chart">
+                        <canvas id="generalChapter"></canvas>
+                    </div>
+                    <div class="chart">
+                        <canvas id="generalRegister"></canvas>
+                    </div>
+                </div>
+                <div class="top-general">
+                    <div class="top-manga">
+                        <canvas id="top-5-manga"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div id="quanLyUser" class="manager-user-info user">
+                <table>
+                    <tr>
+                        <th>ID</th>
+                        <th>Login Name</th>
+                        <th>Display Name</th>
+                        <th>Birthday</th>
+                        <th>Gender</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                        <th>Custom</th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>Lorem ipsum dolor</th>
+                        <th>Lorem, ipsum.</th>
+                        <th>2021-10-12</th>
+                        <th>Nam</th>
+                        <th>Lorem@gmail.com</th>
+                        <th>Kích hoạt</th>
+                        <th>
+                            <a href="#"><i onclick="showPopUp()" class="fa fa-ellipsis-v"></i></a>
+                            <!-- <a href="#"><i class="fa fa-trash-o"></i></a>
+                            <a href="#"><i onclick="lockAndUnlock(this)" class="fa fa-unlock-alt"></i></a>
+                            <a href="#"><i onclick="editUser(this)" class="fa fa-pencil-square-o"></i></a>
+                            <a style="display: none;" href="#"><i onclick="saveUser(this)" class="fa fa-save"></i></a>
+                            <a style="display: none;" href="#"><i onclick="cancelUser(this)" class="fa fa-remove"></i></a> -->
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>Lorem ipsum dolor</th>
+                        <th>Lorem, ipsum.</th>
+                        <th>10-2-2021</th>
+                        <th>Nam</th>
+                        <th>Lorem@gmail.com</th>
+                        <th>Kích hoạt</th>
+                        <th>
+                            <i class="fa fa-trash-o"></i>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>Lorem ipsum dolor</th>
+                        <th>Lorem, ipsum.</th>
+                        <th>10-2-2021</th>
+                        <th>Nam</th>
+                        <th>Lorem@gmail.com</th>
+                        <th>Kích hoạt</th>
+                        <th>
+                            <i class="fa fa-trash-o"></i>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>Lorem ipsum dolor</th>
+                        <th>Lorem, ipsum.</th>
+                        <th>10-2-2021</th>
+                        <th>Nam</th>
+                        <th>Lorem@gmail.com</th>
+                        <th>Kích hoạt</th>
+                        <th>
+                            <i class="fa fa-trash-o"></i>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>Lorem ipsum dolor</th>
+                        <th>Lorem, ipsum.</th>
+                        <th>10-2-2021</th>
+                        <th>Nam</th>
+                        <th>Lorem@gmail.com</th>
+                        <th>Kích hoạt</th>
+                        <th>
+                            <i class="fa fa-trash-o"></i>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>Lorem ipsum dolor</th>
+                        <th>Lorem, ipsum.</th>
+                        <th>10-2-2021</th>
+                        <th>Nam</th>
+                        <th>Lorem@gmail.com</th>
+                        <th>Kích hoạt</th>
+                        <th>
+                            <i class="fa fa-trash-o"></i>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>Lorem ipsum dolor</th>
+                        <th>Lorem, ipsum.</th>
+                        <th>10-2-2021</th>
+                        <th>Nam</th>
+                        <th>Lorem@gmail.com</th>
+                        <th>Kích hoạt</th>
+                        <th>
+                            <i class="fa fa-trash-o"></i>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>Lorem ipsum dolor</th>
+                        <th>Lorem, ipsum.</th>
+                        <th>10-2-2021</th>
+                        <th>Nam</th>
+                        <th>Lorem@gmail.com</th>
+                        <th>Kích hoạt</th>
+                        <th>
+                            <i class="fa fa-trash-o"></i>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>Lorem ipsum dolor</th>
+                        <th>Lorem, ipsum.</th>
+                        <th>10-2-2021</th>
+                        <th>Nam</th>
+                        <th>Lorem@gmail.com</th>
+                        <th>Kích hoạt</th>
+                        <th>
+                            <i class="fa fa-trash-o"></i>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>Lorem ipsum dolor</th>
+                        <th>Lorem, ipsum.</th>
+                        <th>10-2-2021</th>
+                        <th>Nam</th>
+                        <th>Lorem@gmail.com</th>
+                        <th>Kích hoạt</th>
+                        <th>
+                            <i class="fa fa-trash-o"></i>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>Lorem ipsum dolor</th>
+                        <th>Lorem, ipsum.</th>
+                        <th>10-2-2021</th>
+                        <th>Nam</th>
+                        <th>Lorem@gmail.com</th>
+                        <th>Kích hoạt</th>
+                        <th>
+                            <i class="fa fa-trash-o"></i>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>Lorem ipsum dolor</th>
+                        <th>Lorem, ipsum.</th>
+                        <th>10-2-2021</th>
+                        <th>Nam</th>
+                        <th>Lorem@gmail.com</th>
+                        <th>Kích hoạt</th>
+                        <th>
+                            <i class="fa fa-trash-o"></i>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>Lorem ipsum dolor</th>
+                        <th>Lorem, ipsum.</th>
+                        <th>10-2-2021</th>
+                        <th>Nam</th>
+                        <th>Lorem@gmail.com</th>
+                        <th>Kích hoạt</th>
+                        <th>
+                            <i class="fa fa-trash-o"></i>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>Lorem ipsum dolor</th>
+                        <th>Lorem, ipsum.</th>
+                        <th>10-2-2021</th>
+                        <th>Nam</th>
+                        <th>Lorem@gmail.com</th>
+                        <th>Kích hoạt</th>
+                        <th>
+                            <i class="fa fa-trash-o"></i>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>Lorem ipsum dolor</th>
+                        <th>Lorem, ipsum.</th>
+                        <th>10-2-2021</th>
+                        <th>Nam</th>
+                        <th>Lorem@gmail.com</th>
+                        <th>Kích hoạt</th>
+                        <th>
+                            <i class="fa fa-trash-o"></i>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>Lorem ipsum dolor</th>
+                        <th>Lorem, ipsum.</th>
+                        <th>10-2-2021</th>
+                        <th>Nam</th>
+                        <th>Lorem@gmail.com</th>
+                        <th>Kích hoạt</th>
+                        <th>
+                            <i class="fa fa-trash-o"></i>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>Lorem ipsum dolor</th>
+                        <th>Lorem, ipsum.</th>
+                        <th>10-2-2021</th>
+                        <th>Nam</th>
+                        <th>Lorem@gmail.com</th>
+                        <th>Kích hoạt</th>
+                        <th>
+                            <i class="fa fa-trash-o"></i>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>Lorem ipsum dolor</th>
+                        <th>Lorem, ipsum.</th>
+                        <th>10-2-2021</th>
+                        <th>Nam</th>
+                        <th>Lorem@gmail.com</th>
+                        <th>Kích hoạt</th>
+                        <th>
+                            <i class="fa fa-trash-o"></i>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>Lorem ipsum dolor</th>
+                        <th>Lorem, ipsum.</th>
+                        <th>10-2-2021</th>
+                        <th>Nam</th>
+                        <th>Lorem@gmail.com</th>
+                        <th>Kích hoạt</th>
+                        <th>
+                            <i class="fa fa-trash-o"></i>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>Lorem ipsum dolor</th>
+                        <th>Lorem, ipsum.</th>
+                        <th>10-2-2021</th>
+                        <th>Nam</th>
+                        <th>Lorem@gmail.com</th>
+                        <th>Kích hoạt</th>
+                        <th>
+                            <i class="fa fa-trash-o"></i>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>Lorem ipsum dolor</th>
+                        <th>Lorem, ipsum.</th>
+                        <th>10-2-2021</th>
+                        <th>Nam</th>
+                        <th>Lorem@gmail.com</th>
+                        <th>Kích hoạt</th>
+                        <th>
+                            <i class="fa fa-trash-o"></i>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>Lorem ipsum dolor</th>
+                        <th>Lorem, ipsum.</th>
+                        <th>10-2-2021</th>
+                        <th>Nam</th>
+                        <th>Lorem@gmail.com</th>
+                        <th>Kích hoạt</th>
+                        <th>
+                            <i class="fa fa-trash-o"></i>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>Lorem ipsum dolor</th>
+                        <th>Lorem, ipsum.</th>
+                        <th>10-2-2021</th>
+                        <th>Nam</th>
+                        <th>Lorem@gmail.com</th>
+                        <th>Kích hoạt</th>
+                        <th>
+                            <i class="fa fa-trash-o"></i>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>Lorem ipsum dolor</th>
+                        <th>Lorem, ipsum.</th>
+                        <th>10-2-2021</th>
+                        <th>Nam</th>
+                        <th>Lorem@gmail.com</th>
+                        <th>Kích hoạt</th>
+                        <th>
+                            <i class="fa fa-trash-o"></i>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>Lorem ipsum dolor</th>
+                        <th>Lorem, ipsum.</th>
+                        <th>10-2-2021</th>
+                        <th>Nam</th>
+                        <th>Lorem@gmail.com</th>
+                        <th>Kích hoạt</th>
+                        <th>
+                            <i class="fa fa-trash-o"></i>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>Lorem ipsum dolor</th>
+                        <th>Lorem, ipsum.</th>
+                        <th>10-2-2021</th>
+                        <th>Nam</th>
+                        <th>Lorem@gmail.com</th>
+                        <th>Kích hoạt</th>
+                        <th>
+                            <i class="fa fa-trash-o"></i>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>Lorem ipsum dolor</th>
+                        <th>Lorem, ipsum.</th>
+                        <th>10-2-2021</th>
+                        <th>Nam</th>
+                        <th>Lorem@gmail.com</th>
+                        <th>Kích hoạt</th>
+                        <th>
+                            <i class="fa fa-trash-o"></i>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>Lorem ipsum dolor</th>
+                        <th>Lorem, ipsum.</th>
+                        <th>10-2-2021</th>
+                        <th>Nam</th>
+                        <th>Lorem@gmail.com</th>
+                        <th>Kích hoạt</th>
+                        <th>
+                            <i class="fa fa-trash-o"></i>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>Lorem ipsum dolor</th>
+                        <th>Lorem, ipsum.</th>
+                        <th>10-2-2021</th>
+                        <th>Nam</th>
+                        <th>Lorem@gmail.com</th>
+                        <th>Kích hoạt</th>
+                        <th>
+                            <i class="fa fa-trash-o"></i>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>Lorem ipsum dolor</th>
+                        <th>Lorem, ipsum.</th>
+                        <th>10-2-2021</th>
+                        <th>Nam</th>
+                        <th>Lorem@gmail.com</th>
+                        <th>Kích hoạt</th>
+                        <th>
+                            <i class="fa fa-trash-o"></i>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+            <div id="managerManga" class="manager-user-info manga">
+                <table>
+                    <tr>
+                        <th>ID</th>
+                        <th>Login Name</th>
+                        <th>Display Name</th>
+                        <th>Birthday</th>
+                        <th>Gender</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                        <th>Custom</th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>Lorem ipsum dolor</th>
+                        <th>Lorem, ipsum.</th>
+                        <th>2021-10-12</th>
+                        <th>Nam</th>
+                        <th>Lorem@gmail.com</th>
+                        <th>Kích hoạt</th>
+                        <th>
+                            <a href="#"><i class="fa fa-check-square"></i></a>
+                            <a href="#"><i class="fa fa-times-rectangle"></i></a>
+                            <a href="#"><i onclick="showPopUpManga()" class="fa fa-ellipsis-v"></i></a>
+                            <!-- <a href="#"><i onclick="lockAndUnlock(this)" class="fa fa-unlock-alt"></i></a>
+                            <a href="#"><i onclick="editUser(this)" class="fa fa-pencil-square-o"></i></a>
+                            <a style="display: none;" href="#"><i onclick="saveUser(this)" class="fa fa-save"></i></a>
+                            <a style="display: none;" href="#"><i onclick="cancelUser(this)" class="fa fa-remove"></i></a> -->
+                        </th>
+                    </tr>
+                </table>
+            </div>
+            <div id="vaiTro" class="manager-user-info roles">
+                <div class="roles-list">
+                    <div class="role">
+                        <p>Roles</p>
+                        <i onclick="createRole(this)" class="fa fa-plus-circle">
+                            <span>Create Roles</span>
+                        </i>
+                    </div>
+                    <div class="role">
+                        <p>Ăn cứt</p>
+                        <i onclick="deleteRole(this)" class="fa fa-trash-o"></i>
+                    </div>
+                    <div class="role">
+                        <p>Ăn cứt</p>
+                        <i onclick="deleteRole(this)" class="fa fa-trash-o"></i>
+                    </div>
+                </div>
+                <div class="roles-add-info">
+                    <div class="role-input">
+                        <label for="name-role">Roles name</label>
+                        <input type="text" name="" id="name-role">
+                    </div>
+                    <div role-input="1" class="role-input">
+                        <h6>General server permission</h6>
+                        <div class="role">
+                            <p>View channel</p>
+                            <div class="icon-function">
+                                <form action="#" method="GET">
+                                    <label onclick="changePemission1(this)" class="check yes" for="yes"><i class="fa fa-check"></i></label>
+                                    <input type="radio" name="choose" id="yes">
+                                    <label onclick="changePemission1(this)" class="deny" for="deny"><i class="fa fa-minus"></i></label>
+                                    <input type="radio" name="choose" id="deny">
+                                    <label onclick="changePemission1(this)" class="no" for="no"><i class="fa fa-times"></i></label>
+                                    <input type="radio" name="choose" id="no">
+                                </form>
+                            </div>
+                        </div>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, ?</p>
+                    </div>
+                    <div role-input="0" class="role-input">
+                        <div class="role">
+                            <p>View channel</p>
+                            <i onclick="changePemission(this)" class="fa fa-toggle-off"></i>
+                        </div>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, ?</p>
+                    </div>
+                    <div class="role-input">
+                        <div role-input="2" class="role ban">
+                            <p>View channel</p>
+                            <i onclick="changePemission(this)" class="fa fa-toggle-off"></i>
+                        </div>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, ?</p>
+                    </div>
+                    <div class="role-input">
+                        <div class="role">
+                            <p>View channel</p>
+                            <div class="icon-function">
+                                <form action="#" method="GET">
+                                    <label onclick="changePemission1(this)" class="yes" for="yes1"><i class="fa fa-check"></i></label>
+                                    <input type="radio" name="choose" id="yes1">
+                                    <label onclick="changePemission1(this)" class="deny check" for="deny1"><i class="fa fa-minus"></i></label>
+                                    <input type="radio" name="choose" id="deny1">
+                                    <label onclick="changePemission1(this)" class="no" for="no1"><i class="fa fa-times"></i></label>
+                                    <input type="radio" name="choose" id="no1">
+                                </form>
+                            </div>
+                        </div>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, ?</p>
+                    </div>
+                    <div class="role-input">
+                        <div class="role">
+                            <p>View channel</p>
+                            <div class="icon-function">
+                                <form action="#" method="GET">
+                                    <label onclick="changePemission1(this)" class="yes" for="yes1"><i class="fa fa-check"></i></label>
+                                    <input type="radio" name="choose" id="yes1">
+                                    <label onclick="changePemission1(this)" class="deny" for="deny1"><i class="fa fa-minus"></i></label>
+                                    <input type="radio" name="choose" id="deny1">
+                                    <label onclick="changePemission1(this)" class="no check" for="no1"><i class="fa fa-times"></i></label>
+                                    <input type="radio" name="choose" id="no1">
+                                </form>
+                            </div>
+                        </div>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, ?</p>
+                    </div>
+                    <div class="role-input">
+                        <div class="role">
+                            <p>View channel</p>
+                            <i class="fa fa-toggle-off"></i>
+                        </div>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, ?</p>
+                    </div>
+                    <div class="role">
+                        <button class="save">Lưu</button>
+                        <button class="delete">Delete Role</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="box-modal" class="pop-up">
+        <div class="box-modal">
+            <i onclick="cancelPopUp(this)" class="fa fa-times"></i>
+            <div class="title">
+                <img src="./images/daidien.png" alt="">
+                <p>Trọng Phúc</p>
+            </div>
+            <div class="edit-user">
+                <table>
+                    <tr>
+                        <td><label for="name">Họ tên</label></td>
+                        <td><input type="text" name="" id="name"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Email</label></td>
+                        <td><input type="email" name="" id="email"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Sex">Giới tính</label></td>
+                        <td><select name="" id="sex">
+                                <option value="Nam">Nam</option>
+                                <option value="Nữ">Nữ</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td><label for="status">Trạng thái</label></td>
+                        <td><select name="" id="status">
+                                <option value="Ban">Ban</option>
+                                <option value="Active">Kích hoạt</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td>Roles</td>
+                        <td class="list-role">
+                            <div class="your-role">
+                                <div onclick="removeRole(this)" class="delete-role"></div>
+                                <p>Ăn chực</p>
+                            </div>
+                            <div class="your-role">
+                                <div onclick="removeRole(this)" class="delete-role"></div>
+                                <p>Ăn ké</p>
+                            </div>
+                            <div class="add-role">
+                                <i onclick="showMoreRule(this)" class="fa fa-plus-circle"></i>
+                                <div id="more-role" class="more-role">
+                                    <p onclick="addRole(this)">Bla Bla</p>
+                                    <p onclick="addRole(this)">Bla Bla</p>
+                                    <p onclick="addRole(this)">Bla Bla</p>
+                                    <p onclick="addRole(this)">Bla Bla</p>
+                                    <p onclick="addRole(this)">Bla Bla</p>
+                                    <p onclick="addRole(this)">Bla Bla</p>
+                                    <p onclick="addRole(this)">Bla Bla</p>
+                                    <p onclick="addRole(this)">Bla Bla</p>
+                                    <p onclick="addRole(this)">Bla Bla</p>
+                                    <p onclick="addRole(this)">Bla Bla</p>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <button>Lưu</button>
+            </div>
+        </div>
+    </div>
+    <div id="manga-info" class="pop-up">
+        <div class="box-info">
+            <i onclick="cancelPopUp(this)" class="fa fa-times"></i>
+            <table>
+                <tr>
+                    <td colspan="2">
+                        <h4>Attack on titan</h4>
+                    </td>
+                </tr>
+                <tr>
+                    <td><i class="fa fa-filter">Alternative:</i> </td>
+                    <td>Lorem ipsum dolor sit amet asdsadasdsa asdas</td>
+                </tr>
+                <tr>
+                    <td><i class="fa fa-user-plus">Author:</i> </td>
+                    <td>Lorem ipsum dolor sit amet</td>
+                </tr>
+                <tr>
+                    <td><i class="fa fa-spinner">Status:</i> </td>
+                    <td>Lorem ipsum dolor sit amet</td>
+                </tr>
+                <tr>
+                    <td><i class="fa fa-clock-o">Updated:</i> </td>
+                    <td>Lorem ipsum dolor sit amet</td>
+                </tr>
+            </table>
+            <img src="./images/image1.jpg" alt="">
+            <div class="discription">
+                <strong>Nội dung</strong>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi asperiores atque architecto error,
+                    cumque cum eos facilis. Omnis minima ratione fugiat expedita necessitatibus iste, soluta atque
+                    facere corrupti rem tempore?</p>
+            </div>
+        </div>
+
+    </div>
+    <script src="manageUser.js"></script>
+    <script src="home.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./chart.js"></script>
+</body>
+
+</html>

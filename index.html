@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style1.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="afterLogin.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div style="position: absolute;" class="nav-bar">
+            <div class="nav-bar-left">
+                <h2><a href="#">LOGO</a></h2>
+                <ul>
+                    <li><a onclick="show_bar_type()" href="#">Thể loại <i style="font-size: 15px;"
+                                class="fa fa-arrow-down"></i></a></li>
+                    <li><a href="#">Lịch sử</a></li>
+                </ul>
+            </div>
+            <div class="nav-bar-right">
+                <div class="input-search">
+                    <input type="text" name="" id="search" placeholder="Tìm truyện...">
+                    <i id="icon_search" class="fa fa-search" onclick="show_search()"></i>
+                    <div class="search-hint">
+                        <div class="search-hint-items">
+                            <img src="./assets/images/image1.jpg" alt="">
+                            <div class="items-info">
+                                <p>Attack on titan</p>
+                            </div>
+                        </div>
+                        <div class="search-hint-items">
+                            <img src="./assets/images/image2.jpg" alt="">
+                            <div class="items-info">
+                                <p>Conan</p>
+                            </div>
+                        </div>
+                        <div class="search-hint-items">
+                            <img src="./assets/images/image3.jpg" alt="">
+                            <div class="items-info">
+                                <p>Solo leveling</p>
+                            </div>
+                        </div>
+                        <div class="search-hint-items">
+                            <img src="./assets/images/image4.jpg" alt="">
+                            <div class="items-info">
+                                <p>Naruto</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div style="cursor: pointer;" class="bar fa fa-bars" onclick="show_bar_content()"></div>
+                <div id="bar" class="bar-hide-content">
+                    <ul>
+                        <li onclick="show_bar_type()"><i class=" fa fa-arrow-left"></i><a href="#">Thể loại</a>
+                        </li>
+                        <li><a href="#">Lịch sử</a></li>
+                        <li><a href="#">Khác</a></li>
+                        <li><a href="dangNhap.html">Đăng nhập</a></li>
+                        <li><a href="dangKy.html">Đăng ký</a></li>
+                    </ul>
+                </div>
+                <div id="type" class="bar-content-type">
+                    <ul id="list-type">
+                        <li><a href="#">Tất cả</a></li>
+                        <li>Action</li>
+                        <li>Adult</li>
+                        <li>Adventure</li>
+                        <li>Anime</li>
+                        <li>Chuyển sinh</li>
+                        <li>Comedy</li>
+                        <li>Comic</li>
+                        <li>Cooking</li>
+                        <li>Cổ đại</li>
+                        <li>Doujinshi</li>
+                        <li>Drama</li>
+                        <li>Đam mỹ</li>
+                        <li>Ecchi</li>
+                        <li>Fantasy</li>
+                        <li>Gender Bender</li>
+                        <li>Harem</li>
+                        <li>Historical</li>
+                        <li>Horror</li>
+                        <li>Josei</li>
+                        <li>Live action</li>
+                        <li>Manga</li>
+                        <li>Manhua</li>
+                        <li>Manhwa</li>
+                        <li>Martial Arts</li>
+                        <li>Mature</li>
+                        <li>Mecha</li>
+                        <li>Mystery</li>
+                        <li>Ngôn tình</li>
+                        <li>One shot</li>
+                        <li>Psychological</li>
+                        <li>Romance</li>
+                        <li>School life</li>
+                        <!-- <li>Sci-fi</li>
+                        <li>Seinen</li>
+                        <li>Shoujo</li>
+                        <li>Shoujo Ai</li>
+                        <li>Shounen</li>
+                        <li>Shounen Ai</li>
+                        <li>Slice of Life</li>
+                        <li>Smut</li>
+                        <li>Soft Yaoi</li>
+                        <li>Soft Yuri</li>
+                        <li>Sports</li>
+                        <li>Supernatural</li>
+                        <li>Thiếu nhi</li>
+                        <li>Tragedy</li>
+                        <li>Trinh thám</li>
+                        <li>Truyện Scan</li>
+                        <li>Truyện màu</li>
+                        <li>Webtoon</li>
+                        <li>Xuyên không</li> -->
+                    </ul>
+                </div>
+                <ul>
+                    <li><a href="dangNhap.html">Đăng nhập</a></li>
+                    <li><a href="dangKy.html">Đăng ký</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="text translate" data-rate=".7" data-direction="vertical">
+            <div class="box-text">
+                <h1>LOGO</h1>
+            </div>
+        </div>
+        <img src="./assets/images/mountain.png" class="mountain">
+        <img src="./assets/images/person.png" class="person translate" data-ratex=".1" data-ratey=".1"
+            data-direction="horizon">
+        <img src="./assets/images/kiem.png" data-rate=".2" data-direction="vertical" class="kiem translate">
+        <img src="./assets/images/background.jpg" class="sky">
+    </header>
+    <div class="title-container">
+        <img src="./assets/images/clound.png" class="cloud" alt="">
+        <img src="./assets/images/electricCloud.png" class="storm" alt="">
+        <h1 class="from-left">Truyện hot</h1>
+    </div>
+    <div class="fade-in" id="container">
+        <div class="container">
+            <div class="container-image">
+                <img id="container-image-main" src="./assets/images/photo1.png" alt="">
+                <div class="container-title">
+                    <h2>Attack on titan</h2>
+                    <a href="./manga-info.html">Đọc ngay</a>
+                </div>
+            </div>
+            <div class="container-slider">
+                <ul>
+                    <img id="left" src="./assets/images/left-arrow.png" alt="">
+                    <div class="container-slider-list">
+                        <ul>
+                            <li class="list-photo active"><img src="./assets/images/photo1.png" alt=""></li>
+                            <li class="list-photo"><img src="./assets/images/photo2.jpg" alt=""></li>
+                            <li class="list-photo"><img src="./assets/images/photo3.jpg" alt=""></li>
+                            <li class="list-photo"><img src="./assets/images/photo4.jpg" alt=""></li>
+                            <li class="list-photo"><img src="./assets/images/photo5.jpg" alt=""></li>
+                        </ul>
+                    </div>
+                    <img id="right" src="./assets/images/right-arrow.png" alt="">
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container-main">
+        <div class="circle-1"></div>
+        <div class="circle-2"></div>
+        <div class="circle-3"></div>
+        <div class="container-manga">
+            <h3 class="from-left">Truyện mới cập nhật</h3>
+            <div class="list-container fade-in">
+                <div class="list-container-info">
+                    <div class="list-manga">
+                        <img onmouseout="mouseout(event,'manga-info')" onmousemove="mousemove(event,'manga-info')"
+                            src="./assets/images/image1.jpg" alt="">
+                        <a href="/manga-info.html">
+                            <h4>Attack on titan</h4>
+                        </a>
+                        <p>Tác giả ghi chỗ này</p>
+                        <div class="list-manga-chapter">
+                            <div class="chapter-info">
+                                <a href="/chapter-manga.html">Chapter 1</a>
+                                <p>1 giờ trước</p>
+                            </div>
+                            <div class="chapter-info">
+                                <a href="/chapter-manga.html">Chapter 1</a>
+                                <p>1 giờ trước</p>
+                            </div>
+                            <div class="chapter-info">
+                                <a href="/chapter-manga.html">Chapter 1</a>
+                                <p>1 giờ trước</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="manga-info" class="manga-info">
+                        <h5>Attack on titan</h5>
+                        <div class="manga-info-chapter">
+                            <img src="./assets/images/image1.jpg" alt="">
+                            <p>Alternatives:<span>Cái này là gì t méo pk</span></p>
+                            <p>Tác giả:<span>Ông thần nào đó</span></p>
+                            <p>Cập nhật:<span>30/2/2021 - 10:30</span></p>
+                            <p>Lượt xem:<span>300000000</span></p>
+                            <p>Thể loại:<span>Hành động, mlem mlem</span></p>
+                        </div>
+                        <div class="manga-info-description">
+                            Nội dung:
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente nam sint, recusandae
+                                impedit quibusdam repudiandae consequatur assumenda repellendus perspiciatis suscipit.
+                                Odit facilis eum eligendi velit libero voluptates error sed eius minima unde, beatae
+                                itaque soluta quia quaerat neque quod omnis? Praesentium, necessitatibus doloremque.
+                                Perspiciatis non beatae, soluta sed quia libero!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-container-info">
+                    <div class="list-manga">
+                        <img onmouseout="mouseout(event,'manga-info')" onmousemove="mousemove(event,'manga-info')"
+                            src="./assets/images/image1.jpg" alt="">
+                        <a href="/manga-info.html">
+                            <h4>Attack on titan</h4>
+                        </a>
+                        <p>Tác giả ghi chỗ này</p>
+                        <div class="list-manga-chapter">
+                            <div class="chapter-info">
+                                <a href="/chapter-manga.html">Chapter 1</a>
+                                <p>1 giờ trước</p>
+                            </div>
+                            <div class="chapter-info">
+                                <a href="/chapter-manga.html">Chapter 1</a>
+                                <p>1 giờ trước</p>
+                            </div>
+                            <div class="chapter-info">
+                                <a href="/chapter-manga.html">Chapter 1</a>
+                                <p>1 giờ trước</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="manga-info" class="manga-info">
+                        <h5>Attack on titan</h5>
+                        <div class="manga-info-chapter">
+                            <img src="./assets/images/image1.jpg" alt="">
+                            <p>Alternatives:<span>Cái này là gì t méo pk</span></p>
+                            <p>Tác giả:<span>Ông thần nào đó</span></p>
+                            <p>Cập nhật:<span>30/2/2021 - 10:30</span></p>
+                            <p>Lượt xem:<span>300000000</span></p>
+                            <p>Thể loại:<span>Hành động, mlem mlem</span></p>
+                        </div>
+                        <div class="manga-info-description">
+                            Nội dung:
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente nam sint, recusandae
+                                impedit quibusdam repudiandae consequatur assumenda repellendus perspiciatis suscipit.
+                                Odit facilis eum eligendi velit libero voluptates error sed eius minima unde, beatae
+                                itaque soluta quia quaerat neque quod omnis? Praesentium, necessitatibus doloremque.
+                                Perspiciatis non beatae, soluta sed quia libero!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-container-info">
+                    <div class="list-manga">
+                        <img onmouseout="mouseout(event,'manga-info')" onmousemove="mousemove(event,'manga-info')"
+                            src="./assets/images/image1.jpg" alt="">
+                        <a href="/manga-info.html">
+                            <h4>Attack on titan</h4>
+                        </a>
+                        <p>Tác giả ghi chỗ này</p>
+                        <div class="list-manga-chapter">
+                            <div class="chapter-info">
+                                <a href="/chapter-manga.html">Chapter 1</a>
+                                <p>1 giờ trước</p>
+                            </div>
+                            <div class="chapter-info">
+                                <a href="/chapter-manga.html">Chapter 1</a>
+                                <p>1 giờ trước</p>
+                            </div>
+                            <div class="chapter-info">
+                                <a href="/chapter-manga.html">Chapter 1</a>
+                                <p>1 giờ trước</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="manga-info" class="manga-info">
+                        <h5>Attack on titan</h5>
+                        <div class="manga-info-chapter">
+                            <img src="./assets/images/image1.jpg" alt="">
+                            <p>Alternatives:<span>Cái này là gì t méo pk</span></p>
+                            <p>Tác giả:<span>Ông thần nào đó</span></p>
+                            <p>Cập nhật:<span>30/2/2021 - 10:30</span></p>
+                            <p>Lượt xem:<span>300000000</span></p>
+                            <p>Thể loại:<span>Hành động, mlem mlem</span></p>
+                        </div>
+                        <div class="manga-info-description">
+                            Nội dung:
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente nam sint, recusandae
+                                impedit quibusdam repudiandae consequatur assumenda repellendus perspiciatis suscipit.
+                                Odit facilis eum eligendi velit libero voluptates error sed eius minima unde, beatae
+                                itaque soluta quia quaerat neque quod omnis? Praesentium, necessitatibus doloremque.
+                                Perspiciatis non beatae, soluta sed quia libero!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-container-info">
+                    <div class="list-manga">
+                        <img onmouseout="mouseout(event,'manga-info')" onmousemove="mousemove(event,'manga-info')"
+                            src="./assets/images/image1.jpg" alt="">
+                        <a href="/manga-info.html">
+                            <h4>Attack on titan</h4>
+                        </a>
+                        <p>Tác giả ghi chỗ này</p>
+                        <div class="list-manga-chapter">
+                            <div class="chapter-info">
+                                <a href="/chapter-manga.html">Chapter 1</a>
+                                <p>1 giờ trước</p>
+                            </div>
+                            <div class="chapter-info">
+                                <a href="/chapter-manga.html">Chapter 1</a>
+                                <p>1 giờ trước</p>
+                            </div>
+                            <div class="chapter-info">
+                                <a href="/chapter-manga.html">Chapter 1</a>
+                                <p>1 giờ trước</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="manga-info" class="manga-info">
+                        <h5>Attack on titan</h5>
+                        <div class="manga-info-chapter">
+                            <img src="./assets/images/image1.jpg" alt="">
+                            <p>Alternatives:<span>Cái này là gì t méo pk</span></p>
+                            <p>Tác giả:<span>Ông thần nào đó</span></p>
+                            <p>Cập nhật:<span>30/2/2021 - 10:30</span></p>
+                            <p>Lượt xem:<span>300000000</span></p>
+                            <p>Thể loại:<span>Hành động, mlem mlem</span></p>
+                        </div>
+                        <div class="manga-info-description">
+                            Nội dung:
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente nam sint, recusandae
+                                impedit quibusdam repudiandae consequatur assumenda repellendus perspiciatis suscipit.
+                                Odit facilis eum eligendi velit libero voluptates error sed eius minima unde, beatae
+                                itaque soluta quia quaerat neque quod omnis? Praesentium, necessitatibus doloremque.
+                                Perspiciatis non beatae, soluta sed quia libero!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-container-info">
+                    <div class="list-manga">
+                        <img onmouseout="mouseout(event,'manga-info')" onmousemove="mousemove(event,'manga-info')"
+                            src="./assets/images/image1.jpg" alt="">
+                        <a href="/manga-info.html">
+                            <h4>Attack on titan</h4>
+                        </a>
+                        <p>Tác giả ghi chỗ này</p>
+                        <div class="list-manga-chapter">
+                            <div class="chapter-info">
+                                <a href="/chapter-manga.html">Chapter 1</a>
+                                <p>1 giờ trước</p>
+                            </div>
+                            <div class="chapter-info">
+                                <a href="/chapter-manga.html">Chapter 1</a>
+                                <p>1 giờ trước</p>
+                            </div>
+                            <div class="chapter-info">
+                                <a href="/chapter-manga.html">Chapter 1</a>
+                                <p>1 giờ trước</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="manga-info" class="manga-info">
+                        <h5>Attack on titan</h5>
+                        <div class="manga-info-chapter">
+                            <img src="./assets/images/image1.jpg" alt="">
+                            <p>Alternatives:<span>Cái này là gì t méo pk</span></p>
+                            <p>Tác giả:<span>Ông thần nào đó</span></p>
+                            <p>Cập nhật:<span>30/2/2021 - 10:30</span></p>
+                            <p>Lượt xem:<span>300000000</span></p>
+                            <p>Thể loại:<span>Hành động, mlem mlem</span></p>
+                        </div>
+                        <div class="manga-info-description">
+                            Nội dung:
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente nam sint, recusandae
+                                impedit quibusdam repudiandae consequatur assumenda repellendus perspiciatis suscipit.
+                                Odit facilis eum eligendi velit libero voluptates error sed eius minima unde, beatae
+                                itaque soluta quia quaerat neque quod omnis? Praesentium, necessitatibus doloremque.
+                                Perspiciatis non beatae, soluta sed quia libero!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-container-info">
+                    <div class="list-manga">
+                        <img onmouseout="mouseout(event,'manga-info')" onmousemove="mousemove(event,'manga-info')"
+                            src="./assets/images/image1.jpg" alt="">
+                        <a href="/manga-info.html">
+                            <h4>Attack on titan</h4>
+                        </a>
+                        <p>Tác giả ghi chỗ này</p>
+                        <div class="list-manga-chapter">
+                            <div class="chapter-info">
+                                <a href="/chapter-manga.html">Chapter 1</a>
+                                <p>1 giờ trước</p>
+                            </div>
+                            <div class="chapter-info">
+                                <a href="/chapter-manga.html">Chapter 1</a>
+                                <p>1 giờ trước</p>
+                            </div>
+                            <div class="chapter-info">
+                                <a href="/chapter-manga.html">Chapter 1</a>
+                                <p>1 giờ trước</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="manga-info" class="manga-info">
+                        <h5>Attack on titan</h5>
+                        <div class="manga-info-chapter">
+                            <img src="./assets/images/image1.jpg" alt="">
+                            <p>Alternatives:<span>Cái này là gì t méo pk</span></p>
+                            <p>Tác giả:<span>Ông thần nào đó</span></p>
+                            <p>Cập nhật:<span>30/2/2021 - 10:30</span></p>
+                            <p>Lượt xem:<span>300000000</span></p>
+                            <p>Thể loại:<span>Hành động, mlem mlem</span></p>
+                        </div>
+                        <div class="manga-info-description">
+                            Nội dung:
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente nam sint, recusandae
+                                impedit quibusdam repudiandae consequatur assumenda repellendus perspiciatis suscipit.
+                                Odit facilis eum eligendi velit libero voluptates error sed eius minima unde, beatae
+                                itaque soluta quia quaerat neque quod omnis? Praesentium, necessitatibus doloremque.
+                                Perspiciatis non beatae, soluta sed quia libero!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-container-info">
+                    <div class="list-manga">
+                        <img onmouseout="mouseout(event,'manga-info')" onmousemove="mousemove(event,'manga-info')"
+                            src="./assets/images/image1.jpg" alt="">
+                        <a href="/manga-info.html">
+                            <h4>Attack on titan</h4>
+                        </a>
+                        <p>Tác giả ghi chỗ này</p>
+                        <div class="list-manga-chapter">
+                            <div class="chapter-info">
+                                <a href="/chapter-manga.html">Chapter 1</a>
+                                <p>1 giờ trước</p>
+                            </div>
+                            <div class="chapter-info">
+                                <a href="/chapter-manga.html">Chapter 1</a>
+                                <p>1 giờ trước</p>
+                            </div>
+                            <div class="chapter-info">
+                                <a href="/chapter-manga.html">Chapter 1</a>
+                                <p>1 giờ trước</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="manga-info" class="manga-info">
+                        <h5>Attack on titan</h5>
+                        <div class="manga-info-chapter">
+                            <img src="./assets/images/image1.jpg" alt="">
+                            <p>Alternatives:<span>Cái này là gì t méo pk</span></p>
+                            <p>Tác giả:<span>Ông thần nào đó</span></p>
+                            <p>Cập nhật:<span>30/2/2021 - 10:30</span></p>
+                            <p>Lượt xem:<span>300000000</span></p>
+                            <p>Thể loại:<span>Hành động, mlem mlem</span></p>
+                        </div>
+                        <div class="manga-info-description">
+                            Nội dung:
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente nam sint, recusandae
+                                impedit quibusdam repudiandae consequatur assumenda repellendus perspiciatis suscipit.
+                                Odit facilis eum eligendi velit libero voluptates error sed eius minima unde, beatae
+                                itaque soluta quia quaerat neque quod omnis? Praesentium, necessitatibus doloremque.
+                                Perspiciatis non beatae, soluta sed quia libero!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-container-info">
+                    <div class="list-manga">
+                        <img onmouseout="mouseout(event,'manga-info')" onmousemove="mousemove(event,'manga-info')"
+                            src="./assets/images/image1.jpg" alt="">
+                        <a href="/manga-info.html">
+                            <h4>Attack on titan</h4>
+                        </a>
+                        <p>Tác giả ghi chỗ này</p>
+                        <div class="list-manga-chapter">
+                            <div class="chapter-info">
+                                <a href="/chapter-manga.html">Chapter 1</a>
+                                <p>1 giờ trước</p>
+                            </div>
+                            <div class="chapter-info">
+                                <a href="/chapter-manga.html">Chapter 1</a>
+                                <p>1 giờ trước</p>
+                            </div>
+                            <div class="chapter-info">
+                                <a href="/chapter-manga.html">Chapter 1</a>
+                                <p>1 giờ trước</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="manga-info" class="manga-info">
+                        <h5>Attack on titan</h5>
+                        <div class="manga-info-chapter">
+                            <img src="./assets/images/image1.jpg" alt="">
+                            <p>Alternatives:<span>Cái này là gì t méo pk</span></p>
+                            <p>Tác giả:<span>Ông thần nào đó</span></p>
+                            <p>Cập nhật:<span>30/2/2021 - 10:30</span></p>
+                            <p>Lượt xem:<span>300000000</span></p>
+                            <p>Thể loại:<span>Hành động, mlem mlem</span></p>
+                        </div>
+                        <div class="manga-info-description">
+                            Nội dung:
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente nam sint, recusandae
+                                impedit quibusdam repudiandae consequatur assumenda repellendus perspiciatis suscipit.
+                                Odit facilis eum eligendi velit libero voluptates error sed eius minima unde, beatae
+                                itaque soluta quia quaerat neque quod omnis? Praesentium, necessitatibus doloremque.
+                                Perspiciatis non beatae, soluta sed quia libero!</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <ul>
+                <li><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
+                <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                <li>
+                    <select name="" id="">
+                        <option value="chapter1">Chapter 1</option>
+                        <option value="chapter2">Chapter 2</option>
+                        <option value="chapter3">Chapter 3</option>
+                        <option value="chapter4">Chapter 4</option>
+                        <option value="chapter5">Chapter 5</option>
+                    </select>
+                </li>
+                <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                <li><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
+            </ul>
+        </div>
+        <div class="container-comment">
+            <h3 class="from-right">Bình luận</h3>
+            <div class="list-comment fade-in">
+                <div class="list-comment-home">
+                    <div class="user-comment">
+                        <div class="comment-chap">
+                            <a href="#">Tên truyện</a>
+                            <a href="#">Tên chapter</a>
+                        </div>
+                        <div class="comment-info">
+                            <p>Trọng Phúc</p>
+
+                        </div>
+                        <div class="comment">
+                            <a href="#"><img src="./assets/images/daidien.png" alt=""></a>
+                            <p>Web như cc</p>
+                        </div>
+                        <div class="sub-comment">
+                            <a href="#">Trả lời</a>
+                            <p>-</p>
+                            <p class="date-time">22:20
+                                <span class="date-time-info">15/06/2000 21:30:21</span>
+                            </p>
+
+                        </div>
+                        <div class="rely-comment">
+                            <div class="comment-info">
+                                <p>Trọng Phúc</p>
+
+                            </div>
+                            <div class="comment">
+                                <a href="#"><img src="./assets/images/daidien.png" alt=""></a>
+                                <p>Web như cc Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore totam
+                                    similique nisi, libero aut magni eligendi quas eum quibusdam voluptate consequuntur
+                                    doloremque placeat illo nemo vero suscipit voluptatum nihil voluptatibus.</p>
+                            </div>
+                            <div class="sub-comment">
+                                <a href="#">Trả lời</a>
+                                <p>-</p>
+                                <p class="date-time">22:20
+                                    <span class="date-time-info">15/06/2000 21:30:21</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="rely-comment">
+                            <div class="comment-info">
+                                <p>Trọng Phúc</p>
+
+                            </div>
+                            <div class="comment">
+                                <a href="#"><img src="./assets/images/daidien.png" alt=""></a>
+                                <p>Web như cc Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore totam
+                                    similique nisi, libero aut magni eligendi quas eum quibusdam voluptate consequuntur
+                                    doloremque placeat illo nemo vero suscipit voluptatum nihil voluptatibus.</p>
+                            </div>
+                            <div class="sub-comment">
+                                <a href="#">Trả lời</a>
+                                <p>-</p>
+                                <p class="date-time">22:20
+                                    <span class="date-time-info">15/06/2000 21:30:21</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="rely-comment">
+                            <div class="comment-info">
+                                <p>Trọng Phúc</p>
+
+                            </div>
+                            <div class="comment">
+                                <a href="#"><img src="./assets/images/daidien.png" alt=""></a>
+                                <p>Web như cc Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore totam
+                                    similique nisi, libero aut magni eligendi quas eum quibusdam voluptate consequuntur
+                                    doloremque placeat illo nemo vero suscipit voluptatum nihil voluptatibus.</p>
+                            </div>
+                            <div class="sub-comment">
+                                <a href="#">Trả lời</a>
+                                <p>-</p>
+                                <p class="date-time">22:20
+                                    <span class="date-time-info">15/06/2000 21:30:21</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="rely-comment">
+                            <div class="comment-info">
+                                <p>Trọng Phúc</p>
+
+                            </div>
+                            <div class="comment">
+                                <a href="#"><img src="./assets/images/daidien.png" alt=""></a>
+                                <p>Web như cc Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore totam
+                                    similique nisi, libero aut magni eligendi quas eum quibusdam voluptate consequuntur
+                                    doloremque placeat illo nemo vero suscipit voluptatum nihil voluptatibus.</p>
+                            </div>
+                            <div class="sub-comment">
+                                <a href="#">Trả lời</a>
+                                <p>-</p>
+                                <p class="date-time">22:20
+                                    <span class="date-time-info">15/06/2000 21:30:21</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="rely-comment">
+                            <div class="comment-info">
+                                <p>Trọng Phúc</p>
+
+                            </div>
+                            <div class="comment">
+                                <a href="#"><img src="./assets/images/daidien.png" alt=""></a>
+                                <p>Web như cc Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore totam
+                                    similique nisi, libero aut magni eligendi quas eum quibusdam voluptate consequuntur
+                                    doloremque placeat illo nemo vero suscipit voluptatum nihil voluptatibus.</p>
+                            </div>
+                            <div class="sub-comment">
+                                <a href="#">Trả lời</a>
+                                <p>-</p>
+                                <p class="date-time">22:20
+                                    <span class="date-time-info">15/06/2000 21:30:21</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="rely-comment">
+                            <div class="comment-info">
+                                <p>Trọng Phúc</p>
+
+                            </div>
+                            <div class="comment">
+                                <a href="#"><img src="./assets/images/daidien.png" alt=""></a>
+                                <p>Web như cc Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore totam
+                                    similique nisi, libero aut magni eligendi quas eum quibusdam voluptate consequuntur
+                                    doloremque placeat illo nemo vero suscipit voluptatum nihil voluptatibus.</p>
+                            </div>
+                            <div class="sub-comment">
+                                <a href="#">Trả lời</a>
+                                <p>-</p>
+                                <p class="date-time">22:20
+                                    <span class="date-time-info">15/06/2000 21:30:21</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="rely-comment">
+                            <div class="comment-info">
+                                <p>Trọng Phúc</p>
+
+                            </div>
+                            <div class="comment">
+                                <a href="#"><img src="./assets/images/daidien.png" alt=""></a>
+                                <p>Web như cc Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore totam
+                                    similique nisi, libero aut magni eligendi quas eum quibusdam voluptate consequuntur
+                                    doloremque placeat illo nemo vero suscipit voluptatum nihil voluptatibus.</p>
+                            </div>
+                            <div class="sub-comment">
+                                <a href="#">Trả lời</a>
+                                <p>-</p>
+                                <p class="date-time">22:20
+                                    <span class="date-time-info">15/06/2000 21:30:21</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="rely-comment">
+                            <div class="comment-info">
+                                <p>Trọng Phúc</p>
+
+                            </div>
+                            <div class="comment">
+                                <a href="#"><img src="./assets/images/daidien.png" alt=""></a>
+                                <p>Web như cc Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore totam
+                                    similique nisi, libero aut magni eligendi quas eum quibusdam voluptate consequuntur
+                                    doloremque placeat illo nemo vero suscipit voluptatum nihil voluptatibus.</p>
+                            </div>
+                            <div class="sub-comment">
+                                <a href="#">Trả lời</a>
+                                <p>-</p>
+                                <p class="date-time">22:20
+                                    <span class="date-time-info">15/06/2000 21:30:21</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="rely-comment">
+                            <div class="comment-info">
+                                <p>Trọng Phúc</p>
+
+                            </div>
+                            <div class="comment">
+                                <a href="#"><img src="./assets/images/daidien.png" alt=""></a>
+                                <p>Web như cc Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore totam
+                                    similique nisi, libero aut magni eligendi quas eum quibusdam voluptate consequuntur
+                                    doloremque placeat illo nemo vero suscipit voluptatum nihil voluptatibus.</p>
+                            </div>
+                            <div class="sub-comment">
+                                <a href="#">Trả lời</a>
+                                <p>-</p>
+                                <p class="date-time">22:20
+                                    <span class="date-time-info">15/06/2000 21:30:21</span>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="user-comment">
+                        <div class="comment-chap">
+                            <a href="#">Tên truyện</a>
+                            <a href="#">Tên chapter</a>
+                        </div>
+                        <div class="comment-info">
+                            <p>Trọng Phúc</p>
+                        </div>
+                        <div class="comment">
+                            <a href="#"><img src="./assets/images/daidien.png" alt=""></a>
+                            <p>Web như cc</p>
+                        </div>
+                        <div class="sub-comment">
+                            <a href="#">Trả lời</a>
+                            <p>-</p>
+                            <p class="date-time">22:20
+                                <span class="date-time-info">15/06/2000 21:30:21</span>
+                            </p>
+                        </div>
+                        <div class="rely-comment">
+                            <div class="comment-info">
+                                <p>Trọng Phúc</p>
+
+                            </div>
+                            <div class="comment">
+                                <a href="#"><img src="./assets/images/daidien.png" alt=""></a>
+                                <p>Web như cc Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore totam
+                                    similique nisi, libero aut magni eligendi quas eum quibusdam voluptate consequuntur
+                                    doloremque placeat illo nemo vero suscipit voluptatum nihil voluptatibus.</p>
+                            </div>
+                            <div class="sub-comment">
+                                <a href="#">Trả lời</a>
+                                <p>-</p>
+                                <p class="date-time">22:20
+                                    <span class="date-time-info">15/06/2000 21:30:21</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="rely-comment">
+                            <div class="comment-info">
+                                <p>Trọng Phúc</p>
+
+                            </div>
+                            <div class="comment">
+                                <a href="#"><img src="./assets/images/daidien.png" alt=""></a>
+                                <p>Web như cc Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore totam
+                                    similique nisi, libero aut magni eligendi quas eum quibusdam voluptate consequuntur
+                                    doloremque placeat illo nemo vero suscipit voluptatum nihil voluptatibus.</p>
+                            </div>
+                            <div class="sub-comment">
+                                <a href="#">Trả lời</a>
+                                <p>-</p>
+                                <p class="date-time">22:20
+                                    <span class="date-time-info">15/06/2000 21:30:21</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="rely-comment">
+                            <div class="comment-info">
+                                <p>Trọng Phúc</p>
+
+                            </div>
+                            <div class="comment">
+                                <a href="#"><img src="./assets/images/daidien.png" alt=""></a>
+                                <p>Web như cc Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore totam
+                                    similique nisi, libero aut magni eligendi quas eum quibusdam voluptate consequuntur
+                                    doloremque placeat illo nemo vero suscipit voluptatum nihil voluptatibus.</p>
+                            </div>
+                            <div class="sub-comment">
+                                <a href="#">Trả lời</a>
+                                <p>-</p>
+                                <p class="date-time">22:20
+                                    <span class="date-time-info">15/06/2000 21:30:21</span>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- <h5>Dương Cuốc</h5>
+                    <div class="comment">
+                        <div class="image-comment">Q</div>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore, dignissimos!</p>
+                    </div>
+                    <h5>Cửu Vỹ</h5>
+                    <div class="comment">
+                        <div class="image-comment">V</div>
+                        <p>amet consectetur adipisicing elit. Tempore, dignissimos!</p>
+                    </div>
+                    <div class="comment-time">21:30</div>
+                    <h5>Tũn</h5>
+                    <div class="comment">
+                        <div class="image-comment">K</div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum earum, eos aperiam suscipit deleniti autem, laudantium reprehenderit ratione, sint labore hic! Sunt doloribus autem repellat nam explicabo aliquid, molestias harum. amet consectetur adipisicing elit. Tempore, dignissimos!</p>
+                    </div>
+                    <h5>Sang rùa</h5>
+                    <div class="comment">
+                        <div class="image-comment">S</div>
+                        <p>Laborum earum, eos aperiam suscipit deleniti autem, laudantium reprehenderit ratione, sint labore hic! Sunt doloribus autem repellat nam explicabo aliquid, molestias harum. amet consectetur adipisicing elit. Tempore, dignissimos!</p>
+                    </div>
+                    <h5>Khôi</h5>
+                    <div class="comment">
+                        <div class="image-comment">K</div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nostrum dolorum similique ipsa voluptate. Accusantium numquam reprehenderit ipsum ullam. Doloremque expedita eveniet, nulla accusantium tenetur facilis est quibusdam dicta quod voluptate ex minima obcaecati illum eligendi dolor suscipit voluptatibus impedit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis inventore earum dolorum aliquid, nam rerum aliquam similique accusantium modi ipsa laboriosam quae laudantium in voluptate ex quibusdam corporis suscipit placeat. Laborum earum, eos aperiam suscipit deleniti autem, laudantium reprehenderit ratione, sint labore hic! Sunt doloribus autem repellat nam explicabo aliquid, molestias harum. amet consectetur adipisicing elit. Tempore, dignissimos!</p>
+                    </div>
+                    <h5>Khôi</h5>
+                    <div class="comment">
+                        <div class="image-comment">K</div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nostrum dolorum similique ipsa voluptate. Accusantium numquam reprehenderit ipsum ullam. Doloremque expedita eveniet, nulla accusantium tenetur facilis est quibusdam dicta quod voluptate ex minima obcaecati illum eligendi dolor suscipit voluptatibus impedit! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis inventore earum dolorum aliquid, nam rerum aliquam similique accusantium modi ipsa laboriosam quae laudantium in voluptate ex quibusdam corporis suscipit placeat. Laborum earum, eos aperiam suscipit deleniti autem, laudantium reprehenderit ratione, sint labore hic! Sunt doloribus autem repellat nam explicabo aliquid, molestias harum. amet consectetur adipisicing elit. Tempore, dignissimos!</p>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="home.js"></script>
+    <script src="slider.js"></script>
+    <script src="translate.js"></script>
+</body>
+
+</html>

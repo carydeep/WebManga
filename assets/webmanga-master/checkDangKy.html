@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dangNhap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <img class="image image_left" src="./images/Logo-DangKy.gif" alt="">
+    <div class="box_login box_login_right">
+        <img src="./images/Logo-DangKy.gif" alt="">
+        <form action="#" method="get">
+            <h1 style="color: white;">Đăng Ký</h1>
+            <div class="box_login_input box_login_input_left error">
+                <div class="logo_input"><i class="fa fa-user" style="font-size:30px"></i></div>
+                <input type="text" name="" id="" placeholder="Username" required>
+                <p>Tên đăng nhập đã tồn tại</p>
+            </div>
+            <div class="box_login_input box_login_input_right not-error">
+                <input type="password" name="" id="" placeholder="PassWord" required>
+                <div class="logo_input"><i class="fa fa-lock" style="font-size:30px"></i></div>
+            </div>
+            <div class="box_login_input box_login_input_left not-error">
+                <div class="logo_input"><i class="fa fa-lock" style="font-size:30px"></i></div>
+                <input type="password" name="" id="" placeholder="Confirm PassWord" required>
+            </div>
+            <div class="box_login_input box_login_input_right error">
+                <input type="text" name="" id="" placeholder="Tên hiển thị">
+                <div class="logo_input"><i class="fa fa-id-badge" style="font-size:30px"></i></div>
+                <p>Tên đăng nhập đã tồn tại</p>
+            </div>
+            <div class="box_login_input box_login_input_left">
+                <div class="logo_input"><i class="fa fa-google-plus-square" style="font-size:30px"></i></div>
+                <input type="email" name="" id="" placeholder="Email">
+            </div>
+            <div class="box_login_input box_login_input_right">
+                <input type="date" name="" id="">
+                <div class="logo_input"><i class="fa fa-birthday-cake" style="font-size:25px"></i></div>
+            </div>
+            <div class="box_login_input box_login_input_left" style="justify-content: left;">
+                <div class="logo_input"><i class="fa fa-intersex" style="font-size:30px"></i></div>
+                <div class="field">Giới tính</div>
+                <div class="check_box">
+                    <input type="radio" name="gender" id="nam">
+                    <label for="nam"> Nam</label>
+                    <input type="radio" name="gender" id="nu">
+                    <label for="nu"> Nữ</label>
+                    <input type="radio" name="gender" id="khac">
+                    <label for="khac"> Khác</label>
+                </div>
+            </div>
+            <div class="box_login_input box_login_input_left" style="justify-content: left;">
+                <div class="logo_input"><i class="fa fa-handshake-o" style="font-size:25px"></i></div>
+                <div style="width: 6rem;" class="field">Có bồ chưa?</div>
+                <div class="check_box">
+                    <input type="radio" name="isALone" id="co">
+                    <label for="co"> Có</label>
+                    <input type="radio" name="isALone" id="khong">
+                    <label for="khong"> Không</label>
+                    <input type="radio" name="isALone" id="koko">
+                    <label for="koko"> Kó</label>
+                </div>
+            </div>
+            
+            <input type="submit" value="Đăng Ký">
+        </form>
+    </div>
+</body>
+</html>

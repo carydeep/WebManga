@@ -1,0 +1,778 @@
+.container-main{
+    overflow: hidden;
+}
+
+.container-user{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    height: 89vh;
+}
+
+.function-manager-user{
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(15px);
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 30px;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    overflow: hidden;
+}
+
+.function-manager-user ul{
+    list-style: none;
+}
+
+.function-manager-user ul li{
+    padding: 10px;
+    padding-left: 50px;
+    color: white;
+}
+
+.function-manager-user ul li:hover{
+    background-color: rgba(126, 255, 255, 0.5);
+}
+
+.function-manager-user ul li.check{
+    background-color: aqua;
+}
+
+.function-manager-user ul li.check a{
+    color: black;
+}
+
+.function-manager-user ul li:hover a{
+    color: black;
+}
+
+.function-manager-user ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.manager-user-info{
+    margin-left: 2.5%;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(15px);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top: 1px solid rgb(0, 0, 0);
+    border-left: 1px solid white;
+    overflow-y: scroll;
+}
+
+.manager-user-info.user,
+.manager-user-info.manga{
+    display: none;
+}
+
+/* width */
+.manager-user-info::-webkit-scrollbar {
+    width: 5px;
+}
+  
+  /* Track */
+  .manager-user-info::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+  
+  /* Handle */
+  .manager-user-info::-webkit-scrollbar-thumb {
+    background: #888;
+}
+  
+  /* Handle on hover */
+  .manager-user-info::-webkit-scrollbar-thumb:hover {
+    background: rgb(255, 0, 0);
+}
+
+.manager-user-info table{
+    width: 100%;
+    border-spacing: 0;
+}
+
+.manager-user-info table tr{
+    text-align: center;
+}
+
+.manager-user-info table tr th{
+    color: white;
+    padding: 10px 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.manager-user-info table tr:first-child{
+    background-color: aqua;
+    border-radius: 30px;
+}
+
+.manager-user-info table tr:first-child th{
+    border: none;
+    color: black;
+}
+
+.manager-user-info table tr:not(:first-child) th{
+    font-weight: normal;
+}
+
+.manager-user-info table tr:not(:first-child):hover{
+    background-color: rgb(24, 24, 24);
+}
+
+.manager-user-info table tr th a{
+    color: white;
+}
+
+.manager-user-info table tr th i{
+    font-size: 20px;
+    margin: 6px;
+}
+
+.manager-user-info table tr th i.fa-check-square{
+    color: rgba(172, 255, 47, 0.5);
+}
+
+.manager-user-info table tr th i.fa-check-square:hover{
+    color: rgba(172, 255, 47, 1);
+}
+
+.manager-user-info table tr th i.fa-times-rectangle{
+    color: rgba(255, 43, 43, 0.5);
+}
+
+.manager-user-info table tr th i.fa-times-rectangle:hover{
+    color: rgba(255, 43, 43, 1);
+}
+
+.manager-user-info table tr th i:hover{
+    color: chocolate;
+}
+
+.pop-up{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    padding: 10vh 20%;
+    background-color: rgba(240, 248, 255, 0.2);
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    display: none;
+}
+
+.pop-up .box-modal{
+    position: absolute;
+    background-color: white;
+    width: 25%;
+    height: 80vh;
+    left: 25%;
+    top: 10vh;
+    background-color: rgb(36, 36, 36);
+}
+
+.pop-up .box-modal .title{
+    height: 25vh;
+    width: 100%;
+    background-color: black;
+}
+
+.pop-up .box-modal>i{
+    position: absolute;
+    color: white;
+    right: 30px;
+    top: 20px;
+    cursor: pointer;
+}
+
+.pop-up .box-modal .title img{
+    width: 100px;
+    height: 100px;
+    margin-left: calc((100% - 100px) / 2);
+    margin-top: calc((20vh - 100px) / 2);
+    border-radius: 50%;
+    border: 1px solid aqua;
+}
+
+.pop-up .box-modal .title p{
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.pop-up .box-modal .edit-user{
+    margin: 20px;
+    padding: 10px;
+    background-color: rgb(68, 68, 68);
+    color: white;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 48vh;
+    scroll-behavior: smooth;
+}
+
+/* width */
+.edit-user::-webkit-scrollbar {
+    width: 2px;
+  }
+  
+  /* Track */
+  .edit-user::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  .edit-user::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  .edit-user::-webkit-scrollbar-thumb:hover {
+    background: rgb(255, 0, 0);
+  }
+
+.pop-up .box-modal .edit-user table tr td{
+    padding: 10px;
+}
+
+.pop-up .box-modal .edit-user button{
+    padding: 10px;
+    margin-left: 50%;
+    background-color: initial;
+    border: 1px solid greenyellow;
+    color: greenyellow;
+    cursor: pointer;
+}
+
+.pop-up .box-modal .edit-user button:hover{
+    background-color: greenyellow;
+    color: black;
+}
+
+.pop-up .box-modal .edit-user table tr td input{
+    background-color: rgba(136, 136, 136, 0.5);
+    color: white;
+    padding: 5px;
+}
+
+.pop-up .box-modal .edit-user table tr td select{
+    background-color: rgba(136, 136, 136, 0.5);
+    color: white;
+    padding: 5px;
+}
+
+.pop-up .box-modal .edit-user table tr td select option{
+    color: black;
+}
+
+.pop-up .box-modal .edit-user table tr td.list-role{
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.pop-up .box-modal .edit-user table tr td.list-role>.your-role{
+    font-size: 10px;
+    padding: 5px 8px;
+    border: 1px solid white;
+    border-radius: 20px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.pop-up .box-modal .edit-user table tr td.list-role>.your-role .delete-role{
+    width: 10px;
+    height: 10px;
+    background-color: rgb(0, 255, 170);
+    text-align: center;
+    margin-right: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.pop-up .box-modal .edit-user table tr td.list-role>.your-role .delete-role:before{
+    content: 'x';
+    position: relative;
+    top: -2px;
+    color: black;
+    visibility: hidden;
+}
+
+.pop-up .box-modal .edit-user table tr td.list-role>.your-role .delete-role:hover:before{
+    visibility: visible;
+}
+
+.pop-up .box-modal .edit-user table tr td.list-role>div{
+    padding: 10px;
+}
+
+.pop-up .box-modal .edit-user table tr td.list-role>div.add-role{
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+    position: relative;
+}
+
+.pop-up .box-modal .edit-user table tr td.list-role i{
+    font-size: 20px;
+    padding: 7px;
+}
+
+.pop-up .box-modal .edit-user table tr td.list-role>div.add-role .more-role{
+    position: absolute;
+    width: 150px;
+    top: 30px;
+    left: -60px;
+    height: 150px;
+    background-color: rgb(146, 146, 146);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    display: none;
+    overflow-y: scroll;
+}
+
+/* width */
+.more-role::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  .more-role::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  .more-role::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  .more-role::-webkit-scrollbar-thumb:hover {
+    background: rgb(255, 0, 0);
+  }
+
+.pop-up .box-modal .edit-user table tr td.list-role>div.add-role .more-role.show{
+    display: block;
+}
+
+.pop-up .box-modal .edit-user table tr td.list-role>div.add-role .more-role p{
+    color: rgb(215, 255, 188);
+}
+
+.pop-up .box-modal .edit-user table tr td.list-role>div.add-role .more-role p:hover{
+    background-color: rgb(99, 99, 99);
+}
+
+.roles{
+    display: none;
+    grid-template-columns: 20% 45%;
+}
+
+.roles-list{
+    padding: 2vw 20px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/* width */
+.roles-list::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  .roles-list::-webkit-scrollbar-track {
+    background: #6e6e6e;
+  }
+  
+  /* Handle */
+  .roles-list::-webkit-scrollbar-thumb {
+    background: rgb(83, 83, 83);
+  }
+  
+  /* Handle on hover */
+  .roles-list::-webkit-scrollbar-thumb:hover {
+    background: rgb(255, 99, 99);
+  }
+
+.role{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .7vw;
+    color: rgb(221, 221, 221);
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.role.ban{
+    cursor: default;
+    pointer-events: none;
+    opacity: .5;
+}
+
+.role.ban::before{
+    content: "\f05e";
+    font-family: FontAwesome;
+    color: #acacac;
+    margin-left: 10px;
+}
+
+.roles-list .role:hover{
+    background-color: #888;
+}
+
+.roles-list .role i.fa-plus-circle{
+    position: relative;
+}
+
+.roles-list .role i.fa-plus-circle span{
+    visibility: hidden;
+    position: absolute;
+    top: -40px;
+    left: -47px;
+    width: 90px;
+    padding: 7px 10px;
+    border-radius: 20px;
+    background-color: rgb(0, 0, 0);
+}
+
+.roles-list .role i.fa-plus-circle span::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 45%;
+    border: 5px solid ;
+    border-color:black transparent transparent  transparent;
+}
+
+.roles-list .role i.fa-plus-circle:hover span{
+    visibility: visible;
+}
+
+.roles-add-info{
+    margin: 2vw;
+    height: 100%;
+    overflow-x: scroll;
+    padding-right: 30px;
+}
+
+
+/* width */
+.roles-add-info::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  .roles-add-info::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  .roles-add-info::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  .roles-add-info::-webkit-scrollbar-thumb:hover {
+    background: rgb(255, 0, 0);
+  }
+
+.role-input{
+    padding:2vw 0;
+    border-bottom: 1px solid rgb(128, 128, 128);
+}
+
+.role-input label{
+    display: block;
+    margin-bottom: 5px;
+    color: whitesmoke;
+}
+
+.role-input input{
+    width: 100%;
+    padding: 7px;
+    background-color: rgb(53, 53, 53);
+    border: 1px solid black;
+    color: white;
+}
+
+.role-input h6{
+    color: rgb(150, 150, 150);
+    font-size: 15px;
+}
+
+.role-input .role{
+    padding: 1vw 0 0 0;
+    color: white;
+}
+
+.role button{
+    padding: 5px 10px;
+    font-size: 15px;
+    background-color: initial;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.role button.save{
+    border: 1px solid rgb(246, 255, 115);
+    color: rgb(246, 255, 115);
+}
+
+.role button.save:hover{
+    background-color: rgb(246, 255, 115);
+    color: black;
+}
+
+.role button.delete{
+    border: 1px solid rgb(255, 78, 78);
+    color: rgb(255, 78, 78);
+}
+
+.role button.delete:hover{
+    background-color: rgb(255, 78, 78);
+    color: white;
+}
+
+.role-input .role p{
+    font-size: 17px;
+}
+
+.role-input .role i{
+    font-size: 20px;
+}
+
+.role-input .role i.fa-toggle-on{
+    color: rgb(91, 255, 140);
+}
+
+.role-input .role i.fa-toggle-off{
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.role-input .role i.fa-toggle-off:hover{
+    color: black;
+}
+
+.role-input .role i.fa-exclamation-triangle{
+    color: rgb(255, 255, 145);
+}
+
+.role-input .role i.fa-exclamation-triangle:hover{
+    color: rgb(255, 252, 70);
+}
+
+.role-input .role i.fa-exclamation-triangle:active{
+    color: red;
+}
+
+.role-input>p{
+    font-size: 14px;
+    color: rgb(168, 168, 168);
+}
+
+.icon-function form{
+    display: flex;
+    border-radius: 5px;
+    overflow: hidden;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+.icon-function form label{
+    background-color: initial;
+    margin-bottom: 0;
+    cursor: pointer;
+    padding: 5px 7px;
+}
+
+.icon-function form label i.fa-check{
+    color: rgba(174, 255, 52,0.5);
+}
+
+.icon-function form label i.fa-check:hover{
+    color: rgba(174, 255, 52,1);
+}
+
+.icon-function form label i.fa-times{
+    color: rgba(255, 49, 49,0.5);
+}
+
+.icon-function form label i.fa-times:hover{
+    color: rgba(255, 49, 49,1);
+}
+
+.icon-function form label i.fa-minus{
+    transform: rotate(120deg);
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.icon-function form label i.fa-minus:hover{
+    color: white;
+}
+
+.icon-function form label.check.yes{
+    background-color: rgb(98, 163, 0);
+}
+
+.icon-function form label.check i{
+    color: white;
+}
+
+.icon-function form label.check.deny{
+    background-color: rgb(128, 128, 128);
+}
+
+.icon-function form label.check.no{
+    background-color: rgb(216, 27, 27);
+}
+
+.general-web{
+    display: flex;
+    width: 95%;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+.general-web .box-general{
+    display: flex;
+    width: 20%;
+    justify-content: space-between;
+    padding: 20px;
+    position: relative;
+}
+
+.general-web .box-general.user{
+    background-image: linear-gradient(to right,rgb(60, 242, 255),rgb(0, 37, 94));
+}
+
+.general-web .box-general.book{
+    background-image: linear-gradient(to right,rgb(255, 171, 93),rgb(87, 0, 51));
+}
+
+.general-web .box-general.comment{
+    background-image: linear-gradient(to right,rgb(255, 174, 0),rgb(68, 56, 0));
+}
+
+.general-web .box-general.view{
+    background-image: linear-gradient(to right,rgb(137, 116, 255),rgb(46, 0, 59));
+}
+
+.general-web .box-general>i{
+    position: absolute;
+    font-size: 60px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: rgba(201, 201, 201, 0.2);
+}
+
+.general-web .box-general .box-title{
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.general-web .box-general .box-number{
+    font-size: 30px;
+    color: white;
+}
+
+/* .general-web .box-general.user ,
+.general-web .box-general.user i{
+    color: rgb(0, 155, 216);
+}
+
+.general-web .box-general.book ,
+.general-web .box-general.book i{
+    color: rgb(247, 0, 0);
+}
+
+.general-web .box-general.comment ,
+.general-web .box-general.comment i{
+    color: rgb(255, 230, 0);
+}
+
+.general-web .box-general.view ,
+.general-web .box-general.view i{
+    color: rgb(43, 255, 36);
+} */
+
+.general-web .chart{
+    width: 35%;
+    background-color: #2b2b2b;
+    padding: 2vw;
+    margin: 2vw 0;
+}
+
+.top-general{
+    display: flex;
+    margin: 20px;
+    width: 90%;
+    justify-content: space-around;
+}
+
+.top-general .top-manga{
+    width: 40%;
+    padding: 2vw;
+    background-color: #2b2b2b;
+}
+
+.box-info{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60vw;
+    height: 70vh;
+    background-color: #e4e4e4;
+    position: relative;
+}
+
+.box-info table{
+    width: 20vw;
+    margin: 20px;
+}
+
+.box-info table tr td h4{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.box-info table tr td i{
+    padding: 5px;
+    color: coral;
+}
+
+.box-info img{
+    width: 300px;
+    height: 400px;
+}
+
+.box-info .discription{
+    padding: 30px;
+    
+}
+
+.box-info .discription strong{
+    color: rgb(0, 50, 158);
+}
+
+.box-info>i{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+
+.box-info>i:hover{
+    color: rgb(255, 100, 100);
+}

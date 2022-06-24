@@ -1,0 +1,168 @@
+#toTheTop{
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    color: #40FFDF;
+    padding: 2vw 3vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(15px);
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 50;
+}
+
+.nav-bar{
+    border-bottom: 1px white solid;
+}
+
+.title-manga{
+    display: flex;
+    align-items: baseline;
+    padding-top: 2vw;
+    margin-left: 3vw;
+}
+
+.title-manga a{
+    text-decoration: none;
+    color: burlywood;
+}
+
+.title-manga h3{
+    color: #40FFDF;
+    font-size: 5vw;
+}
+
+.title-manga i{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 3.5vw;
+    margin: 0 1vw;
+}
+
+.title-manga p{
+    color: #40FFDF;
+    font-size: 4.5vw;
+}
+
+.list-chapter{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin: 5vw 0;
+    position: sticky;
+    top: 5px;
+    z-index: 50;
+}
+
+.list-chapter a{
+    color: #40FFDF;
+    padding: 2vw 3vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(15px);
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    border-radius: 10px;
+}
+
+.list-chapter form{
+    width: 36vw;
+    text-align: center;
+}
+
+.list-chapter form select{
+    font-size: 3vw;
+    width: 30vw;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(15px);
+    color: white;
+    outline: none;
+}
+
+.list-chapter form select option{
+    color: black;
+}
+
+.content-chapter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+.content-chapter img{
+    width: 95%;
+}
+
+.list-comment .user-comment .comment-info{
+    margin-left: 4%;
+}
+
+.list-comment .user-comment .rely-comment{
+    margin-left: 4%;
+}
+
+.list-comment .user-comment .rely-comment .comment .line{
+    left: -34px;
+}
+
+@media (min-width: 1100px){
+    #toTheTop{
+        padding: 1vw 1.5vw;
+    }
+    
+    .container-main{
+        display: unset;
+    }
+
+    .title-manga h3{
+        color: #40FFDF;
+        font-size: 3vw;
+    }
+    
+    .title-manga i{
+        font-size: 1.5vw;
+    }
+
+    .title-manga p{
+        font-size: 2vw;
+    }
+
+    .list-chapter a{
+        padding: 1vw 1.5vw;
+    }
+    
+    .list-chapter form{
+        width: 25vw;
+        text-align: center;
+    }
+    
+    .list-chapter form select{
+        font-size: 2vw;
+        width: 20vw;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(15px);
+        color: white;
+        outline: none;
+    }
+
+    .content-chapter{
+        width: 100%;
+    }
+    
+    .content-chapter img{
+        width: fit-content;
+    }
+
+    .container-main .container-comment{
+        width: 100%;
+    }
+
+    .list-comment{
+        border-radius: 0;
+    }
+}

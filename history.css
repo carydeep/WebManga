@@ -1,0 +1,75 @@
+.container-main{
+    display: block;
+}
+
+.container-main .container-manga-info{
+    display: flex;
+    align-items: center;
+    margin-left: 2vw;
+}
+
+.container-main .container-manga-info a{
+    text-decoration: none;
+    font-size: 25px;
+    color: wheat;
+}
+
+.container-main .container-manga-info i{
+    color: white;
+    margin: 0 1vw;
+}
+
+.container-main table{
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(30px);
+    border-top: solid 1px white;
+    border-left: solid 1px white;
+    margin-top: 2vw;
+    margin-left: 5%;
+    color: white;
+    width: 90%;
+    padding: 1vw;
+    border-spacing: 0;
+}
+
+.container-main table tr{
+    position: relative;
+}
+
+.container-main table tr:hover{
+    background-color: rgba(224, 192, 150, 0.1);
+}
+
+.container-main table tr:hover i{
+    visibility: unset;
+}
+
+.container-main table tr td p a{
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+}
+
+.container-main table tr td i{
+    color: white;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.container-main table td{
+    padding: 1vw 1vw;
+    border-bottom: 1px solid rgb(151, 151, 151);
+}
+
+.container-main table tr td a{
+    text-decoration: none;
+    color: rgb(19, 174, 212);
+}
+
+.container-main table tr td a:hover{
+    text-decoration: underline;
+}
+
+.container-main table tr td p{
+    font-size: 15px;
+}

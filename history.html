@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="afterLogin.css">
+    <link rel="stylesheet" href="history.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="nav-bar">
+        <div class="nav-bar-left">
+            <h2>LOGO</h2>
+            <ul>
+                <li><a href="#">Thể loại<i onclick="show_bar_type()" style="font-size: 15px;" class="fa fa-arrow-down"></i></a></li>
+                <li><a href="#">Lịch sử</a></li>
+                <li><a href="#">Khác</a></li>
+            </ul>
+        </div>
+        <div class="nav-bar-right">
+            <div class="input-search">
+                <input type="text" name="" id="search" placeholder="Tìm truyện...">
+                <i id="icon_search" class="fa fa-search" onclick="show_search()"></i>
+            </div>
+            <div style="cursor: pointer;" class="bar fa fa-bars" onclick="show_bar_content()"></div>
+            <div id="bar" class="bar-hide-content">
+                <ul >
+                    <li onclick="show_bar_type()"><i class=" fa fa-arrow-left"></i><a href="#">Thể loại</a>
+                    </li>
+                    <li><a href="#">Lịch sử</a></li>
+                    <li><a href="#">Khác</a></li>
+                    <li><a href="#">Thông báo</a></li>
+                    <li><a href="home.html">Đăng xuất</a></li>
+                </ul>
+            </div>
+            <div id="type" class="bar-content-type">
+                <ul>
+                    <li>Tất cả</li>
+                    <li>Action</li>
+                    <li>Adult</li>
+                    <li>Adventure</li>
+                    <li>Anime</li>
+                    <li>Chuyển sinh</li>
+                    <li>Comedy</li>
+                    <li>Comic</li>
+                    <li>Cooking</li>
+                    <li>Cổ đại</li>
+                    <li>Doujinshi</li>
+                    <li>Drama</li>
+                    <li>Đam mỹ</li>
+                    <li>Ecchi</li>
+                    <li>Fantasy</li>
+                    <li>Gender Bender</li>
+                    <li>Harem</li>
+                    <li>Historical</li>
+                    <li>Horror</li>
+                    <li>Josei</li>
+                    <li>Live action</li>
+                    <li>Manga</li>
+                    <li>Manhua</li>
+                    <li>Manhwa</li>
+                    <li>Martial Arts</li>
+                    <li>Mature</li>
+                    <li>Mecha</li>
+                    <li>Mystery</li>
+                    <li>Ngôn tình</li>
+                    <li>One shot</li>
+                    <li>Psychological</li>
+                    <li>Romance</li>
+                    <li>School life</li>
+                    <li>Sci-fi</li>
+                    <li>Seinen</li>
+                    <li>Shoujo</li>
+                    <li>Shoujo Ai</li>
+                    <li>Shounen</li>
+                    <li>Shounen Ai</li>
+                    <li>Slice of Life</li>
+                    <li>Smut</li>
+                    <li>Soft Yaoi</li>
+                    <li>Soft Yuri</li>
+                    <li>Sports</li>
+                    <li>Supernatural</li>
+                    <li>Thiếu nhi</li>
+                    <li>Tragedy</li>
+                    <li>Trinh thám</li>
+                    <li>Truyện Scan</li>
+                    <li>Truyện màu</li>
+                    <li>Webtoon</li>
+                    <li>Xuyên không</li>
+                </ul>
+            </div>
+            <ul>
+                <li><a href="user-info.html"><img src="./images/daidien.png" alt=""></a></li>
+                <li><a href="#"><i class="fa fa-bell-o"></i><sup>12</sup></a></li>
+                <li><a href="home.html"><i class="fa fa-sign-out"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container-main">
+        <div class="circle-1"></div>
+        <div class="circle-2"></div>
+        <div class="circle-3"></div>
+        <div class="container-manga-info">
+            <h3><a href="#">Read manga online</a></h3>
+            <i class="fa fa-angle-double-right"></i>
+            <h4><a href="#">History</a></h4>
+        </div>
+        <table>
+            <tr>
+                <td>
+                    <p><a href="#">Tên truyện</a></p>
+                    <p><a href="#">Tên chapter</a></p>
+                </td>
+                <td>
+                    <p>Bạn đã đọc abc xyz</p>
+                </td>
+                <td>
+                    <p>Ngày giờ</p>
+                </td>
+                <td>
+                    <i class="fa fa-remove"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Tên truyện</p>
+                    <p>Tên chapter</p>
+                </td>
+                <td>
+                    <p>Bạn đã đọc abc xyz</p>
+                </td>
+                <td>
+                    <p>Ngày giờ</p>
+                </td>
+                <td>
+                    <i class="fa fa-remove"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Tên truyện</p>
+                    <p>Tên chapter</p>
+                </td>
+                <td>
+                    <p>Bạn đã đọc abc xyz</p>
+                </td>
+                <td>
+                    <p>Ngày giờ</p>
+                </td>
+                <td>
+                    <i class="fa fa-remove"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Tên truyện</p>
+                    <p>Tên chapter</p>
+                </td>
+                <td>
+                    <p>Bạn đã đọc abc xyz</p>
+                </td>
+                <td>
+                    <p>Ngày giờ</p>
+                </td>
+                <td>
+                    <i class="fa fa-remove"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Tên truyện</p>
+                    <p>Tên chapter</p>
+                </td>
+                <td>
+                    <p>Bạn đã đọc abc xyz</p>
+                </td>
+                <td>
+                    <p>Ngày giờ</p>
+                </td>
+                <td>
+                    <i class="fa fa-remove"></i>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center;" colspan="4">
+                    <a href="#">Xem thêm</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script src="home.js"></script>
+</body>
+</html>
