@@ -16,7 +16,7 @@ var info = new Array(
   "Fairytail",
   "Weathering with you",
   "Sword art online"
-)
+);
 let i = 0;
 function autoslide() {
   if (i < 4) {
@@ -41,27 +41,55 @@ left.onclick = function () {
     container_slider[i].classList.remove("active");
     titles.innerHTML = info[i - 1];
     i--;
-  }
-  else {
+  } else {
     container_image_main.src = background_image[4];
     container_slider[4].classList.add("active");
     container_slider[0].classList.remove("active");
     titles.innerHTML = info[4];
     i = 4;
   }
+};
+setInterval(autoslide, 4000);
+
+let indicators = document.getElementById("indicators").children;
+for (let j = 0; j < indicators.length; j++) {
+  indicators[j].addEventListener("click", () => {
+    const value = parseInt(indicators[j].getAttribute("value"));
+    container_image_main.src = background_image[value - 1];
+    container_slider[j].classList.add("active");
+    container_slider[i].classList.remove("active");
+    i = j;
+  });
 }
-setInterval(autoslide, 3000);
 
 // var manga_info = document.getElementById("manga-info");
 function mousemove(e, i) {
-  var x = e.offsetX,
-    y = e.offsetY,
+  var x = e.clientX,
+    y = e.clientY,
     manga_info = document.getElementById(i);
-  manga_info.style.top = (y + 50) + 'px';
-  manga_info.style.left = (x + 50) + 'px';
+  manga_info.style.top = y + 5 + "px";
+  manga_info.style.left = x + 5 + "px";
   manga_info.style.visibility = "visible";
 }
 function mouseout(e, i) {
   var manga_info = document.getElementById(i);
   manga_info.style.visibility = "hidden";
 }
+
+const imageHover = document.querySelectorAll("#imageHover");
+imageHover.forEach((image) => {
+  let parent = image.parentElement;
+  let boxDetail = parent.nextElementSibling;
+
+  image.addEventListener("mousemove", (e) => {
+    let positionPage = image.getBoundingClientRect();
+    let x = e.clientX,
+      y = e.clientY;
+    boxDetail.style.top = y - positionPage.top + 50 + "px";
+    boxDetail.style.left = x - positionPage.left + 25 + "px";
+    boxDetail.style.visibility = "visible";
+  });
+  image.addEventListener("mouseout", (e) => {
+    boxDetail.style.visibility = "hidden";
+  });
+});
